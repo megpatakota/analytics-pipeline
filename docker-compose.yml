@@ -1,0 +1,48 @@
+# docker-compose.yml (or .yaml)
+version: '3.8'
+
+services:
+  # The database service
+  db:
+    image: postgres:16-alpine  # Use a specific, stable, and small-footprint image
+    container_name: patakota_postgres_db
+    restart: unless-stopped   # Always restart the container unless it was stopped manually
+    environment:
+      # These variables create the initial user and database
+      # In a real production setup, use Docker Secrets or a secrets manager
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+      # Specify the data directory inside the container
+      PGDATA: /var/lib/postgresql/data
+    
+    # Define a named volume for persistent storage
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    
+    # Health check to ensure the database is ready for connections
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    
+    # Restrict network exposure: DO NOT expose port 5432 publicly!
+    # The application service will connect to 'db:5432' within the 'backend_network'.
+    networks:
+      - backend_network
+    
+    # Optional: Expose the port locally only for maintenance/debugging
+    # Only uncomment in special cases and never in a publicly accessible host
+    # ports:
+    #   - "5432:5432"
+
+# Define the named volume for data persistence
+volumes:
+  postgres_data:
+    driver: local  # Use the local driver
+
+# Define the internal network
+networks:
+  backend_network:
+    driver: bridge
