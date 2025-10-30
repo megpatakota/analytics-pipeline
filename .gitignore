@@ -1,1 +1,15 @@
 .env
+
+# macOS
+.DS_Store
+
+# dbt artifacts
+data_models/target/
+data_models/logs/
+data_models/dbt_packages/
+
+# Python (if app.py becomes Python-based)
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/

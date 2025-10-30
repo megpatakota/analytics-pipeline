@@ -15,13 +15,9 @@ services:
       PGDATA: /var/lib/postgresql/data
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      # Mount custom tuning file
-      - ./infrastructure/postgres/postgresql.conf:/etc/postgresql/postgresql.conf
     command: 
       - -c
       - listen_addresses=*
-      - -c
-      - config_file=/etc/postgresql/postgresql.conf
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
       interval: 5s

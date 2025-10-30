@@ -20,7 +20,6 @@ The pipeline consists of four services orchestrated by Docker Compose.
 
 **Volumes**:
 - `postgres_data` - Persistent storage for database files
-- `./infrastructure/postgres/postgresql.conf` - Custom PostgreSQL configuration
 
 **Environment Variables**:
 - `POSTGRES_USER` - From `.env` (`DB_USER`)
@@ -28,7 +27,6 @@ The pipeline consists of four services orchestrated by Docker Compose.
 - `POSTGRES_DB` - From `.env` (`DB_NAME`)
 
 **Custom Configuration**:
-- Custom config file mounted: `/etc/postgresql/postgresql.conf`
 - Listen on all addresses: `listen_addresses=*`
 
 **Network**: `backend_network` (bridge)
@@ -327,31 +325,6 @@ WHERE
 
 **Networks**:
 - `backend_network` - Bridge network for service communication
-
-### `infrastructure/postgres/postgresql.conf`
-
-**Purpose**: Custom PostgreSQL configuration
-
-**Current Status**: Empty (uses defaults)
-
-**Potential Settings**:
-- Memory allocation
-- Query planner settings
-- Logging configuration
-- Performance tuning
-
-## App Directory
-
-### `app/app.py`
-
-**Purpose**: Application code (to be implemented)
-
-**Current Status**: Empty
-
-**Future Uses**:
-- Web API endpoints
-- Data ingestion logic
-- Business logic application
 
 ---
 

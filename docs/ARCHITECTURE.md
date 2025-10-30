@@ -6,7 +6,7 @@ This document explains the high-level architecture and design patterns used in t
 
 ```
 ┌─────────────────┐
-│   Application   │  (app.py - Future API/Web App)
+│   Application   │  (Writes data)
 └────────┬────────┘
          │ Writes to
          ▼

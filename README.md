@@ -37,8 +37,6 @@ sql/
 │   ├── DATA_FLOW.md                        # Data flow documentation
 │   ├── COMPONENTS.md                       # Component details
 │   └── COMMANDS.md                         # Commands reference
-├── app/                                     # Application code
-│   └── app.py                              # (To be implemented)
 ├── data_models/                             # DBT Project
 │   ├── dbt_project.yml                     # DBT configuration
 │   ├── profiles.yml                        # Database connection details
@@ -46,9 +44,6 @@ sql/
 │       ├── sources.yml                     # Raw table references
 │       ├── staging/                        # Data cleaning layer
 │       └── marts/                          # Business intelligence layer
-├── infrastructure/
-│   └── postgres/
-│       └── postgresql.conf                 # PostgreSQL configuration
 └── migrations/                             # Database schema
     ├── V1__create_raw_tables.sql           # Creates raw tables
     └── V2__add_foreign_keys.sql            # (Optional) FK constraints
@@ -108,7 +103,7 @@ docker exec -it data_transformer dbt run --target prod
 2. **Add Sample Data**: See [Commands Reference](docs/COMMANDS.md#adding-sample-data)
 3. **Explore Data**: Follow the [pgAdmin Guide](docs/PGADMIN_GUIDE.md)
 4. **Understand Flow**: Read [Data Flow Documentation](docs/DATA_FLOW.md)
-5. **Extend Pipeline**: Add more models, implement `app.py`, connect BI tools
+5. **Extend Pipeline**: Add more models, connect BI tools, integrate with applications
 
 ---
 
