@@ -27,7 +27,9 @@ For details, see [Architecture Overview](docs/ARCHITECTURE.md).
 
 ```
 sql/
-├── .env                                    # Environment variables (secrets)
+├── .env                                    # Environment variables (secrets) - create from .env.example
+├── .env.example                            # Environment template
+├── .gitignore                              # Git ignore rules
 ├── docker-compose.yml                       # Multi-service orchestration
 ├── README.md                                # This file
 ├── docs/                                    # 📚 Documentation folder
@@ -87,7 +89,7 @@ docker compose ps
 docker compose logs -f db
 
 # Access database CLI
-docker exec -it my_app_postgres_db psql -U prod_app_user_2025 -d primary_app_db
+docker exec -it my_app_postgres_db psql -U $DB_USER -d $DB_NAME
 
 # Rebuild transforms
 docker exec -it data_transformer dbt run --target prod

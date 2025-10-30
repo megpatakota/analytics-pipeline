@@ -27,25 +27,27 @@ Both commands should return version numbers.
 Create a `.env` file in the project root directory:
 
 ```bash
-touch .env
+cp .env.example .env
 ```
 
-Add the following content to `.env`:
+Then edit `.env` with your actual credentials. The `.env.example` file provides a template with placeholder values.
+
+Alternatively, you can create `.env` manually:
 
 ```ini
 # Database Credentials
-DB_USER=prod_app_user_2025
-DB_PASSWORD=Gk7#pW!qRz8$sX4@tY1^eU6
-DB_NAME=primary_app_db
+DB_USER=your_db_user
+DB_PASSWORD=your_strong_password
+DB_NAME=your_database_name
 
 # pgAdmin Credentials
-PGADMIN_DEFAULT_EMAIL=admin@example.com
-PGADMIN_DEFAULT_PASSWORD=admin123
+PGADMIN_DEFAULT_EMAIL=your_email@example.com
+PGADMIN_DEFAULT_PASSWORD=your_pgadmin_password
 ```
 
-> ⚠️ **Security Note**: In production, use strong, randomly generated passwords!
+> ⚠️ **Security Note**: Use strong, randomly generated passwords for all credentials!
 
-> 📝 **Note**: The `.env` file is already in `.gitignore` to prevent accidental commits.
+> 📝 **Note**: The `.env` file is already in `.gitignore` to prevent accidental commits. Never commit sensitive credentials.
 
 ### Step 2: Start All Services
 

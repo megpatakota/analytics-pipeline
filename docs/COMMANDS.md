@@ -79,19 +79,19 @@ docker compose ps --format json
 
 #### Quick Access
 ```bash
-docker exec -it my_app_postgres_db psql -U prod_app_user_2025 -d primary_app_db
+docker exec -it my_app_postgres_db psql -U $DB_USER -d $DB_NAME
 ```
 
 #### With Custom Commands
 ```bash
 # List all databases
-docker exec -it my_app_postgres_db psql -U prod_app_user_2025 -d primary_app_db -c "\l"
+docker exec -it my_app_postgres_db psql -U $DB_USER -d $DB_NAME -c "\l"
 
 # List all schemas
-docker exec -it my_app_postgres_db psql -U prod_app_user_2025 -d primary_app_db -c "\dn"
+docker exec -it my_app_postgres_db psql -U $DB_USER -d $DB_NAME -c "\dn"
 
 # List all tables
-docker exec -it my_app_postgres_db psql -U prod_app_user_2025 -d primary_app_db -c "\dt public.*"
+docker exec -it my_app_postgres_db psql -U $DB_USER -d $DB_NAME -c "\dt public.*"
 ```
 
 ### Common psql Commands
@@ -118,7 +118,7 @@ Once inside psql:
 ### Running SQL Scripts
 
 ```bash
-docker exec -i my_app_postgres_db psql -U prod_app_user_2025 -d primary_app_db < script.sql
+docker exec -i my_app_postgres_db psql -U $DB_USER -d $DB_NAME < script.sql
 ```
 
 ## DBT Commands
@@ -215,7 +215,7 @@ docker compose logs -t dbt
 
 #### Insert Sample Products
 ```bash
-docker exec -it my_app_postgres_db psql -U prod_app_user_2025 -d primary_app_db -c "
+docker exec -it my_app_postgres_db psql -U $DB_USER -d $DB_NAME -c "
 INSERT INTO public.raw_products (product_sku, product_name, category_id, unit_price, current_stock, is_active) VALUES
 ('LAPTOP-001', 'Gaming Laptop', 1, 1299.99, 15, true),
 ('LAPTOP-002', 'Business Laptop', 1, 899.99, 25, true),
@@ -227,7 +227,7 @@ INSERT INTO public.raw_products (product_sku, product_name, category_id, unit_pr
 
 #### Insert Sample Orders
 ```bash
-docker exec -it my_app_postgres_db psql -U prod_app_user_2025 -d primary_app_db -c "
+docker exec -it my_app_postgres_db psql -U $DB_USER -d $DB_NAME -c "
 INSERT INTO public.raw_orders (customer_id, order_status, order_timestamp, total_paid) VALUES
 (1, 'Delivered', NOW() - INTERVAL '2 days', 1299.99),
 (2, 'Delivered', NOW() - INTERVAL '1 day', 39.98),
@@ -237,7 +237,7 @@ INSERT INTO public.raw_orders (customer_id, order_status, order_timestamp, total
 
 #### Insert Sample Order Items
 ```bash
-docker exec -it my_app_postgres_db psql -U prod_app_user_2025 -d primary_app_db -c "
+docker exec -it my_app_postgres_db psql -U $DB_USER -d $DB_NAME -c "
 INSERT INTO public.raw_order_items (order_id, product_id, quantity, unit_price_at_sale) VALUES
 (1, 1, 1, 1299.99),
 (2, 3, 2, 19.99),
@@ -258,29 +258,29 @@ docker exec -it data_transformer dbt run --target prod
 
 #### Full Backup
 ```bash
-docker exec -it my_app_postgres_db pg_dump -U prod_app_user_2025 primary_app_db > backup.sql
+docker exec -it my_app_postgres_db pg_dump -U $DB_USER $DB_NAME > backup.sql
 ```
 
 #### Schema-Only Backup
 ```bash
-docker exec -it my_app_postgres_db pg_dump -U prod_app_user_2025 -s primary_app_db > schema_only.sql
+docker exec -it my_app_postgres_db pg_dump -U $DB_USER -s $DB_NAME > schema_only.sql
 ```
 
 #### Restore Backup
 ```bash
-docker exec -i my_app_postgres_db psql -U prod_app_user_2025 primary_app_db < backup.sql
+docker exec -i my_app_postgres_db psql -U $DB_USER $DB_NAME < backup.sql
 ```
 
 ### Query Data from Command Line
 
 ```bash
 # Total products
-docker exec -it my_app_postgres_db psql -U prod_app_user_2025 -d primary_app_db -c "
+docker exec -it my_app_postgres_db psql -U $DB_USER -d $DB_NAME -c "
 SELECT COUNT(*) FROM public.raw_products;
 "
 
 # Sales summary
-docker exec -it my_app_postgres_db psql -U prod_app_user_2025 -d primary_app_db -c "
+docker exec -it my_app_postgres_db psql -U $DB_USER -d $DB_NAME -c "
 SELECT 
     product_category_name,
     SUM(gross_revenue_amount) as total_revenue
@@ -353,7 +353,7 @@ docker exec -u root -it my_app_postgres_db bash
 
 ```bash
 # Test database connectivity
-docker exec -it my_app_postgres_db pg_isready -U prod_app_user_2025
+docker exec -it my_app_postgres_db pg_isready -U $DB_USER
 ```
 
 ### Check DBT Project Files
@@ -391,12 +391,12 @@ docker compose logs -f db dbt
 
 ### Execute SQL and Exit
 ```bash
-docker exec my_app_postgres_db psql -U prod_app_user_2025 -d primary_app_db -c "SELECT NOW();"
+docker exec my_app_postgres_db psql -U $DB_USER -d $DB_NAME -c "SELECT NOW();"
 ```
 
 ### Get Row Counts
 ```bash
-docker exec -it my_app_postgres_db psql -U prod_app_user_2025 -d primary_app_db -c "
+docker exec -it my_app_postgres_db psql -U $DB_USER -d $DB_NAME -c "
 SELECT 
     schemaname,
     tablename,

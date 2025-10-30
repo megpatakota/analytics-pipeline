@@ -12,9 +12,7 @@ This guide explains how to access and explore your database using the pgAdmin we
    http://localhost:8080
    ```
 
-3. Log in with credentials from your `.env` file:
-   - **Email**: `admin@example.com`
-   - **Password**: `admin123`
+3. Log in with credentials from your `.env` file (PGADMIN_DEFAULT_EMAIL and PGADMIN_DEFAULT_PASSWORD)
 
 4. You should see the pgAdmin dashboard!
 
@@ -23,7 +21,7 @@ This guide explains how to access and explore your database using the pgAdmin we
 If you prefer command-line access:
 
 ```bash
-docker exec -it my_app_postgres_db psql -U prod_app_user_2025 -d primary_app_db
+docker exec -it my_app_postgres_db psql -U $DB_USER -d $DB_NAME
 ```
 
 Type `\q` to exit.
@@ -51,9 +49,9 @@ Fill in the following details:
 |-------|-------|-------|
 | **Host name/address** | `db` | This is the Docker service name |
 | **Port** | `5432` | Default PostgreSQL port |
-| **Maintenance database** | `primary_app_db` | From your .env file |
-| **Username** | `prod_app_user_2025` | From your .env file |
-| **Password** | `Gk7#pW!qRz8$sX4@tY1^eU6` | From your .env file |
+| **Maintenance database** | `{your DB_NAME}` | From your .env file |
+| **Username** | `{your DB_USER}` | From your .env file |
+| **Password** | `{your DB_PASSWORD}` | From your .env file |
 | **Save password?** | ✓ Check this box | Optional but convenient |
 
 Click **"Save"**
@@ -65,7 +63,7 @@ Once connected, expand the server tree in the left sidebar:
 ```
 Production DB
 └── Databases
-    └── primary_app_db
+    └── {your_database_name}
         └── Schemas
             ├── public           # Raw tables
             ├── staging          # DBT staging views
@@ -135,7 +133,7 @@ Navigate to `Schemas → analytics → Tables`:
 
 ### Using Query Tool
 
-1. Right-click on `primary_app_db` → **"Query Tool"**
+1. Right-click on `{your_database_name}` → **"Query Tool"**
 2. Type your SQL query, for example:
 
 ```sql
