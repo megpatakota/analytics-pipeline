@@ -58,3 +58,7 @@ my_app_postgres_db      "docker-entrypoint.s…"    db                  running 
 ```
 
 The key status to look for is **`running (healthy)`**, which means the PostgreSQL server is ready for connections.
+
+
+to enter postgres
+docker exec -it my_app_postgres_db psql -U prod_app_user_2025 -d primary_app_db

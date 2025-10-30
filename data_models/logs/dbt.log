@@ -1,0 +1,2747 @@
+
+
+============================== 19:19:32.286402 | c3e9248e-6e56-410b-9a96-e8763daae957 ==============================
+[0m19:19:32.286402 [info ] [MainThread]: Running with dbt=1.9.0
+[0m19:19:32.297451 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': '/usr/app/dbt_project', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug --target prod', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m19:19:32.298077 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m19:19:32.322890 [info ] [MainThread]: dbt version: 1.9.0
+[0m19:19:32.323324 [info ] [MainThread]: python version: 3.12.4
+[0m19:19:32.323652 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m19:19:32.323940 [info ] [MainThread]: os info: Linux-6.12.5-linuxkit-x86_64-with-glibc2.31
+[0m19:19:32.328120 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'DB_USER'
+[0m19:19:32.330331 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.091229334, "process_in_blocks": "0", "process_kernel_time": 0.058061, "process_mem_max_rss": "102504", "process_out_blocks": "1467", "process_user_time": 1.045107}
+[0m19:19:32.330832 [debug] [MainThread]: Command `dbt debug` failed at 19:19:32.330725 after 0.09 seconds
+[0m19:19:32.331126 [debug] [MainThread]: Flushing usage events
+
+
+============================== 19:20:17.995959 | c44905c8-dcdb-4ea2-9db4-347c91d35056 ==============================
+[0m19:20:17.995959 [info ] [MainThread]: Running with dbt=1.9.0
+[0m19:20:18.007354 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/usr/app/dbt_project', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug --target prod', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m19:20:18.008095 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m19:20:18.033282 [info ] [MainThread]: dbt version: 1.9.0
+[0m19:20:18.033708 [info ] [MainThread]: python version: 3.12.4
+[0m19:20:18.034022 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m19:20:18.034381 [info ] [MainThread]: os info: Linux-6.12.5-linuxkit-x86_64-with-glibc2.31
+[0m19:20:18.083439 [info ] [MainThread]: Using profiles dir at /usr/app/dbt_project
+[0m19:20:18.083894 [info ] [MainThread]: Using profiles.yml file at /usr/app/dbt_project/profiles.yml
+[0m19:20:18.084219 [info ] [MainThread]: Using dbt_project.yml file at /usr/app/dbt_project/dbt_project.yml
+[0m19:20:18.084664 [info ] [MainThread]: adapter type: postgres
+[0m19:20:18.084988 [info ] [MainThread]: adapter version: 1.9.0
+[0m19:20:18.085341 [info ] [MainThread]: Configuration:
+[0m19:20:18.085657 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:20:18.085930 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m19:20:18.086244 [info ] [MainThread]: Required dependencies:
+[0m19:20:18.086722 [debug] [MainThread]: Executing "git --help"
+[0m19:20:18.103758 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:20:18.104271 [debug] [MainThread]: STDERR: "b''"
+[0m19:20:18.104624 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:20:18.104956 [info ] [MainThread]: Connection:
+[0m19:20:18.105261 [info ] [MainThread]:   host: db
+[0m19:20:18.105548 [info ] [MainThread]:   port: 5432
+[0m19:20:18.105827 [info ] [MainThread]:   user: prod_app_user_2025
+[0m19:20:18.106110 [info ] [MainThread]:   database: primary_app_db
+[0m19:20:18.106383 [info ] [MainThread]:   schema: public
+[0m19:20:18.106718 [info ] [MainThread]:   connect_timeout: 10
+[0m19:20:18.106979 [info ] [MainThread]:   role: None
+[0m19:20:18.107228 [info ] [MainThread]:   search_path: None
+[0m19:20:18.107508 [info ] [MainThread]:   keepalives_idle: 0
+[0m19:20:18.107794 [info ] [MainThread]:   sslmode: None
+[0m19:20:18.108069 [info ] [MainThread]:   sslcert: None
+[0m19:20:18.108321 [info ] [MainThread]:   sslkey: None
+[0m19:20:18.108619 [info ] [MainThread]:   sslrootcert: None
+[0m19:20:18.108916 [info ] [MainThread]:   application_name: dbt
+[0m19:20:18.109203 [info ] [MainThread]:   retries: 1
+[0m19:20:18.109642 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m19:20:18.162453 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m19:20:18.191822 [debug] [MainThread]: Using postgres connection "debug"
+[0m19:20:18.195479 [debug] [MainThread]: On debug: select 1 as id
+[0m19:20:18.195812 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:20:18.236730 [debug] [MainThread]: SQL status: SELECT 1 in 0.041 seconds
+[0m19:20:18.238055 [debug] [MainThread]: On debug: Close
+[0m19:20:18.238523 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m19:20:18.238923 [info ] [MainThread]: [31m1 check failed:[0m
+[0m19:20:18.239298 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </usr/app/dbt_project/dbt_project.yml> not found
+
+[0m19:20:18.241031 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.29268742, "process_in_blocks": "0", "process_kernel_time": 0.076869, "process_mem_max_rss": "116360", "process_out_blocks": "1500", "process_user_time": 1.180004}
+[0m19:20:18.241552 [debug] [MainThread]: Command `dbt debug` failed at 19:20:18.241457 after 0.29 seconds
+[0m19:20:18.241993 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:20:18.242349 [debug] [MainThread]: Flushing usage events
+
+
+============================== 19:21:32.922794 | 387a7b5c-cdb1-4df5-a774-97aa770f3bd1 ==============================
+[0m19:21:32.922794 [info ] [MainThread]: Running with dbt=1.9.0
+[0m19:21:32.931098 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/usr/app/dbt_project/logs', 'fail_fast': 'False', 'profiles_dir': '/usr/app/dbt_project', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug --target prod', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m19:21:32.931701 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m19:21:32.937492 [info ] [MainThread]: dbt version: 1.9.0
+[0m19:21:32.937824 [info ] [MainThread]: python version: 3.12.4
+[0m19:21:32.938116 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m19:21:32.938408 [info ] [MainThread]: os info: Linux-6.12.5-linuxkit-x86_64-with-glibc2.31
+[0m19:21:32.987281 [info ] [MainThread]: Using profiles dir at /usr/app/dbt_project
+[0m19:21:32.987755 [info ] [MainThread]: Using profiles.yml file at /usr/app/dbt_project/profiles.yml
+[0m19:21:32.988060 [info ] [MainThread]: Using dbt_project.yml file at /usr/app/dbt_project/dbt_project.yml
+[0m19:21:32.988521 [info ] [MainThread]: adapter type: postgres
+[0m19:21:32.988869 [info ] [MainThread]: adapter version: 1.9.0
+[0m19:21:33.066357 [info ] [MainThread]: Configuration:
+[0m19:21:33.066843 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:21:33.067154 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:21:33.067496 [info ] [MainThread]: Required dependencies:
+[0m19:21:33.067969 [debug] [MainThread]: Executing "git --help"
+[0m19:21:33.084154 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:21:33.084729 [debug] [MainThread]: STDERR: "b''"
+[0m19:21:33.085025 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:21:33.085296 [info ] [MainThread]: Connection:
+[0m19:21:33.085566 [info ] [MainThread]:   host: db
+[0m19:21:33.085830 [info ] [MainThread]:   port: 5432
+[0m19:21:33.086138 [info ] [MainThread]:   user: prod_app_user_2025
+[0m19:21:33.086506 [info ] [MainThread]:   database: primary_app_db
+[0m19:21:33.086803 [info ] [MainThread]:   schema: public
+[0m19:21:33.087085 [info ] [MainThread]:   connect_timeout: 10
+[0m19:21:33.087360 [info ] [MainThread]:   role: None
+[0m19:21:33.087636 [info ] [MainThread]:   search_path: None
+[0m19:21:33.087897 [info ] [MainThread]:   keepalives_idle: 0
+[0m19:21:33.088162 [info ] [MainThread]:   sslmode: None
+[0m19:21:33.088448 [info ] [MainThread]:   sslcert: None
+[0m19:21:33.088809 [info ] [MainThread]:   sslkey: None
+[0m19:21:33.089136 [info ] [MainThread]:   sslrootcert: None
+[0m19:21:33.089457 [info ] [MainThread]:   application_name: dbt
+[0m19:21:33.089762 [info ] [MainThread]:   retries: 1
+[0m19:21:33.090202 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m19:21:33.140392 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m19:21:33.167122 [debug] [MainThread]: Using postgres connection "debug"
+[0m19:21:33.167519 [debug] [MainThread]: On debug: select 1 as id
+[0m19:21:33.167798 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:21:33.209151 [debug] [MainThread]: SQL status: SELECT 1 in 0.041 seconds
+[0m19:21:33.210495 [debug] [MainThread]: On debug: Close
+[0m19:21:33.211003 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m19:21:33.211412 [info ] [MainThread]: [32mAll checks passed![0m
+[0m19:21:33.214296 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.35637176, "process_in_blocks": "0", "process_kernel_time": 0.071867, "process_mem_max_rss": "119664", "process_out_blocks": "12", "process_user_time": 1.213769}
+[0m19:21:33.214874 [debug] [MainThread]: Command `dbt debug` succeeded at 19:21:33.214765 after 0.36 seconds
+[0m19:21:33.215237 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:21:33.215633 [debug] [MainThread]: Flushing usage events
+
+
+============================== 19:21:34.334576 | ff7bee23-3103-4220-9d0c-c20328017ff7 ==============================
+[0m19:21:34.334576 [info ] [MainThread]: Running with dbt=1.9.0
+[0m19:21:34.341642 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/usr/app/dbt_project', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/usr/app/dbt_project/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt run --target prod', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m19:21:34.342301 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m19:21:34.521732 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m19:21:34.575351 [debug] [MainThread]: checksum: 5e136c6ef973c3d2d7bca0f5b88d13d58073133b7e7d38a3e8d0aac8e6391733, vars: {}, profile: , target: prod, version: 1.9.0
+[0m19:21:34.576352 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m19:21:35.331159 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.data_models.stg_products' (models/staging/stg_products.sql) depends on a source named 'public.raw_products' which was not found
+[0m19:21:35.333380 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.0644851, "process_in_blocks": "0", "process_kernel_time": 0.070977, "process_mem_max_rss": "114316", "process_out_blocks": "3", "process_user_time": 1.910385}
+[0m19:21:35.333949 [debug] [MainThread]: Command `dbt run` failed at 19:21:35.333832 after 1.07 seconds
+[0m19:21:35.334519 [debug] [MainThread]: Flushing usage events
+
+
+============================== 19:22:27.452708 | 207d3fd0-07bb-493f-8a2f-28112a615d1e ==============================
+[0m19:22:27.452708 [info ] [MainThread]: Running with dbt=1.9.0
+[0m19:22:27.461025 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/usr/app/dbt_project', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/usr/app/dbt_project/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug --target prod', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m19:22:27.461638 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m19:22:27.467615 [info ] [MainThread]: dbt version: 1.9.0
+[0m19:22:27.467960 [info ] [MainThread]: python version: 3.12.4
+[0m19:22:27.468239 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m19:22:27.468515 [info ] [MainThread]: os info: Linux-6.12.5-linuxkit-x86_64-with-glibc2.31
+[0m19:22:27.518385 [info ] [MainThread]: Using profiles dir at /usr/app/dbt_project
+[0m19:22:27.518893 [info ] [MainThread]: Using profiles.yml file at /usr/app/dbt_project/profiles.yml
+[0m19:22:27.519230 [info ] [MainThread]: Using dbt_project.yml file at /usr/app/dbt_project/dbt_project.yml
+[0m19:22:27.519743 [info ] [MainThread]: adapter type: postgres
+[0m19:22:27.520071 [info ] [MainThread]: adapter version: 1.9.0
+[0m19:22:27.597756 [info ] [MainThread]: Configuration:
+[0m19:22:27.598178 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:22:27.598556 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:22:27.598870 [info ] [MainThread]: Required dependencies:
+[0m19:22:27.599425 [debug] [MainThread]: Executing "git --help"
+[0m19:22:27.616212 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:22:27.616768 [debug] [MainThread]: STDERR: "b''"
+[0m19:22:27.617098 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:22:27.617426 [info ] [MainThread]: Connection:
+[0m19:22:27.617770 [info ] [MainThread]:   host: db
+[0m19:22:27.618076 [info ] [MainThread]:   port: 5432
+[0m19:22:27.618365 [info ] [MainThread]:   user: prod_app_user_2025
+[0m19:22:27.618679 [info ] [MainThread]:   database: primary_app_db
+[0m19:22:27.618984 [info ] [MainThread]:   schema: public
+[0m19:22:27.619275 [info ] [MainThread]:   connect_timeout: 10
+[0m19:22:27.619538 [info ] [MainThread]:   role: None
+[0m19:22:27.619819 [info ] [MainThread]:   search_path: None
+[0m19:22:27.620077 [info ] [MainThread]:   keepalives_idle: 0
+[0m19:22:27.620340 [info ] [MainThread]:   sslmode: None
+[0m19:22:27.620630 [info ] [MainThread]:   sslcert: None
+[0m19:22:27.620916 [info ] [MainThread]:   sslkey: None
+[0m19:22:27.621187 [info ] [MainThread]:   sslrootcert: None
+[0m19:22:27.621433 [info ] [MainThread]:   application_name: dbt
+[0m19:22:27.621703 [info ] [MainThread]:   retries: 1
+[0m19:22:27.622111 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m19:22:27.668642 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m19:22:27.696609 [debug] [MainThread]: Using postgres connection "debug"
+[0m19:22:27.697044 [debug] [MainThread]: On debug: select 1 as id
+[0m19:22:27.697349 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:22:27.740828 [debug] [MainThread]: SQL status: SELECT 1 in 0.043 seconds
+[0m19:22:27.742169 [debug] [MainThread]: On debug: Close
+[0m19:22:27.742715 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m19:22:27.743128 [info ] [MainThread]: [32mAll checks passed![0m
+[0m19:22:27.746114 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.3585245, "process_in_blocks": "0", "process_kernel_time": 0.099878, "process_mem_max_rss": "119612", "process_out_blocks": "12", "process_user_time": 1.19455}
+[0m19:22:27.746720 [debug] [MainThread]: Command `dbt debug` succeeded at 19:22:27.746609 after 0.36 seconds
+[0m19:22:27.747065 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:22:27.747461 [debug] [MainThread]: Flushing usage events
+
+
+============================== 19:22:28.855750 | a0b46fef-3167-46d2-9581-76492b423568 ==============================
+[0m19:22:28.855750 [info ] [MainThread]: Running with dbt=1.9.0
+[0m19:22:28.862749 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/usr/app/dbt_project/logs', 'profiles_dir': '/usr/app/dbt_project', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run --target prod', 'send_anonymous_usage_stats': 'False'}
+[0m19:22:28.863351 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m19:22:29.041026 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m19:22:29.094985 [debug] [MainThread]: checksum: 5e136c6ef973c3d2d7bca0f5b88d13d58073133b7e7d38a3e8d0aac8e6391733, vars: {}, profile: , target: prod, version: 1.9.0
+[0m19:22:29.095937 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m19:22:30.063071 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/dbt_project/target/manifest.json
+[0m19:22:30.065460 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/dbt_project/target/semantic_manifest.json
+[0m19:22:30.087978 [info ] [MainThread]: Found 5 models, 3 sources, 429 macros
+[0m19:22:30.089805 [info ] [MainThread]: 
+[0m19:22:30.090207 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m19:22:30.090567 [info ] [MainThread]: 
+[0m19:22:30.091109 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m19:22:30.095545 [debug] [ThreadPool]: Acquiring new postgres connection 'list_primary_app_db'
+[0m19:22:30.096212 [debug] [ThreadPool]: Acquiring new postgres connection 'list_primary_app_db'
+[0m19:22:30.122042 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db"
+[0m19:22:30.122703 [debug] [ThreadPool]: On list_primary_app_db: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "list_primary_app_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m19:22:30.122342 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db"
+[0m19:22:30.123009 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:22:30.123284 [debug] [ThreadPool]: On list_primary_app_db: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "list_primary_app_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m19:22:30.124515 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:22:30.180656 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.056 seconds
+[0m19:22:30.180938 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.058 seconds
+[0m19:22:30.182351 [debug] [ThreadPool]: On list_primary_app_db: Close
+[0m19:22:30.183329 [debug] [ThreadPool]: On list_primary_app_db: Close
+[0m19:22:30.184440 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_primary_app_db, now create_primary_app_db_public_staging)
+[0m19:22:30.184717 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_primary_app_db, now create_primary_app_db_public_analytics)
+[0m19:22:30.185683 [debug] [ThreadPool]: Creating schema "database: "primary_app_db"
+schema: "public_analytics"
+"
+[0m19:22:30.185307 [debug] [ThreadPool]: Creating schema "database: "primary_app_db"
+schema: "public_staging"
+"
+[0m19:22:30.189443 [debug] [ThreadPool]: Using postgres connection "create_primary_app_db_public_analytics"
+[0m19:22:30.191671 [debug] [ThreadPool]: On create_primary_app_db_public_analytics: BEGIN
+[0m19:22:30.191399 [debug] [ThreadPool]: Using postgres connection "create_primary_app_db_public_staging"
+[0m19:22:30.192159 [debug] [ThreadPool]: On create_primary_app_db_public_staging: BEGIN
+[0m19:22:30.191914 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:22:30.192429 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:22:30.197790 [debug] [ThreadPool]: SQL status: BEGIN in 0.005 seconds
+[0m19:22:30.198058 [debug] [ThreadPool]: Using postgres connection "create_primary_app_db_public_staging"
+[0m19:22:30.198323 [debug] [ThreadPool]: On create_primary_app_db_public_staging: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "create_primary_app_db_public_staging"} */
+create schema if not exists "public_staging"
+[0m19:22:30.198958 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.000 seconds
+[0m19:22:30.199756 [debug] [ThreadPool]: On create_primary_app_db_public_staging: COMMIT
+[0m19:22:30.199960 [debug] [ThreadPool]: SQL status: BEGIN in 0.008 seconds
+[0m19:22:30.200550 [debug] [ThreadPool]: Using postgres connection "create_primary_app_db_public_analytics"
+[0m19:22:30.200216 [debug] [ThreadPool]: Using postgres connection "create_primary_app_db_public_staging"
+[0m19:22:30.201057 [debug] [ThreadPool]: On create_primary_app_db_public_staging: COMMIT
+[0m19:22:30.200810 [debug] [ThreadPool]: On create_primary_app_db_public_analytics: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "create_primary_app_db_public_analytics"} */
+create schema if not exists "public_analytics"
+[0m19:22:30.201611 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.000 seconds
+[0m19:22:30.202379 [debug] [ThreadPool]: On create_primary_app_db_public_analytics: COMMIT
+[0m19:22:30.202804 [debug] [ThreadPool]: Using postgres connection "create_primary_app_db_public_analytics"
+[0m19:22:30.202591 [debug] [ThreadPool]: SQL status: COMMIT in 0.001 seconds
+[0m19:22:30.203054 [debug] [ThreadPool]: On create_primary_app_db_public_analytics: COMMIT
+[0m19:22:30.203306 [debug] [ThreadPool]: On create_primary_app_db_public_staging: Close
+[0m19:22:30.203932 [debug] [ThreadPool]: SQL status: COMMIT in 0.000 seconds
+[0m19:22:30.204206 [debug] [ThreadPool]: On create_primary_app_db_public_analytics: Close
+[0m19:22:30.206076 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_primary_app_db_public_staging, now list_primary_app_db_public_staging)
+[0m19:22:30.206451 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_primary_app_db_public_analytics, now list_primary_app_db_public_analytics)
+[0m19:22:30.236738 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db_public_staging"
+[0m19:22:30.238155 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db_public_analytics"
+[0m19:22:30.238529 [debug] [ThreadPool]: On list_primary_app_db_public_staging: BEGIN
+[0m19:22:30.238845 [debug] [ThreadPool]: On list_primary_app_db_public_analytics: BEGIN
+[0m19:22:30.239144 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:22:30.239431 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:22:30.244738 [debug] [ThreadPool]: SQL status: BEGIN in 0.006 seconds
+[0m19:22:30.244996 [debug] [ThreadPool]: SQL status: BEGIN in 0.006 seconds
+[0m19:22:30.245285 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db_public_staging"
+[0m19:22:30.245594 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db_public_analytics"
+[0m19:22:30.245923 [debug] [ThreadPool]: On list_primary_app_db_public_staging: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "list_primary_app_db_public_staging"} */
+select
+      'primary_app_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'primary_app_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'primary_app_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+  
+[0m19:22:30.246275 [debug] [ThreadPool]: On list_primary_app_db_public_analytics: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "list_primary_app_db_public_analytics"} */
+select
+      'primary_app_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_analytics'
+    union all
+    select
+      'primary_app_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_analytics'
+    union all
+    select
+      'primary_app_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_analytics'
+  
+[0m19:22:30.248565 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.002 seconds
+[0m19:22:30.248773 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.002 seconds
+[0m19:22:30.249801 [debug] [ThreadPool]: On list_primary_app_db_public_analytics: ROLLBACK
+[0m19:22:30.250833 [debug] [ThreadPool]: On list_primary_app_db_public_staging: ROLLBACK
+[0m19:22:30.251278 [debug] [ThreadPool]: On list_primary_app_db_public_analytics: Close
+[0m19:22:30.251565 [debug] [ThreadPool]: On list_primary_app_db_public_staging: Close
+[0m19:22:30.255472 [debug] [MainThread]: Using postgres connection "master"
+[0m19:22:30.255809 [debug] [MainThread]: On master: BEGIN
+[0m19:22:30.256110 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:22:30.260836 [debug] [MainThread]: SQL status: BEGIN in 0.005 seconds
+[0m19:22:30.261130 [debug] [MainThread]: Using postgres connection "master"
+[0m19:22:30.261511 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m19:22:30.264117 [debug] [MainThread]: SQL status: SELECT 0 in 0.002 seconds
+[0m19:22:30.265291 [debug] [MainThread]: On master: ROLLBACK
+[0m19:22:30.265649 [debug] [MainThread]: Using postgres connection "master"
+[0m19:22:30.265917 [debug] [MainThread]: On master: BEGIN
+[0m19:22:30.266320 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m19:22:30.266651 [debug] [MainThread]: On master: COMMIT
+[0m19:22:30.266910 [debug] [MainThread]: Using postgres connection "master"
+[0m19:22:30.267164 [debug] [MainThread]: On master: COMMIT
+[0m19:22:30.267490 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m19:22:30.267779 [debug] [MainThread]: On master: Close
+[0m19:22:30.269782 [debug] [Thread-1 (]: Began running node model.data_models.stg_order_items
+[0m19:22:30.270077 [debug] [Thread-2 (]: Began running node model.data_models.stg_orders
+[0m19:22:30.270351 [debug] [Thread-3 (]: Began running node model.data_models.stg_products
+[0m19:22:30.270839 [info ] [Thread-1 (]: 1 of 5 START sql view model public_staging.stg_order_items ..................... [RUN]
+[0m19:22:30.272106 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_primary_app_db_public_staging, now model.data_models.stg_order_items)
+[0m19:22:30.271732 [info ] [Thread-3 (]: 3 of 5 START sql view model public_staging.stg_products ........................ [RUN]
+[0m19:22:30.271271 [info ] [Thread-2 (]: 2 of 5 START sql view model public_staging.stg_orders .......................... [RUN]
+[0m19:22:30.272428 [debug] [Thread-1 (]: Began compiling node model.data_models.stg_order_items
+[0m19:22:30.272867 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.data_models.stg_products'
+[0m19:22:30.273291 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_primary_app_db_public_analytics, now model.data_models.stg_orders)
+[0m19:22:30.278793 [debug] [Thread-1 (]: Writing injected SQL for node "model.data_models.stg_order_items"
+[0m19:22:30.279147 [debug] [Thread-3 (]: Began compiling node model.data_models.stg_products
+[0m19:22:30.279473 [debug] [Thread-2 (]: Began compiling node model.data_models.stg_orders
+[0m19:22:30.281836 [debug] [Thread-3 (]: Writing injected SQL for node "model.data_models.stg_products"
+[0m19:22:30.283765 [debug] [Thread-2 (]: Writing injected SQL for node "model.data_models.stg_orders"
+[0m19:22:30.285344 [debug] [Thread-1 (]: Began executing node model.data_models.stg_order_items
+[0m19:22:30.285643 [debug] [Thread-2 (]: Began executing node model.data_models.stg_orders
+[0m19:22:30.297618 [debug] [Thread-3 (]: Began executing node model.data_models.stg_products
+[0m19:22:30.311713 [debug] [Thread-1 (]: Writing runtime sql for node "model.data_models.stg_order_items"
+[0m19:22:30.313754 [debug] [Thread-2 (]: Writing runtime sql for node "model.data_models.stg_orders"
+[0m19:22:30.315732 [debug] [Thread-3 (]: Writing runtime sql for node "model.data_models.stg_products"
+[0m19:22:30.317739 [debug] [Thread-1 (]: Using postgres connection "model.data_models.stg_order_items"
+[0m19:22:30.318099 [debug] [Thread-1 (]: On model.data_models.stg_order_items: BEGIN
+[0m19:22:30.318376 [debug] [Thread-3 (]: Using postgres connection "model.data_models.stg_products"
+[0m19:22:30.318629 [debug] [Thread-2 (]: Using postgres connection "model.data_models.stg_orders"
+[0m19:22:30.318924 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:22:30.319249 [debug] [Thread-3 (]: On model.data_models.stg_products: BEGIN
+[0m19:22:30.319556 [debug] [Thread-2 (]: On model.data_models.stg_orders: BEGIN
+[0m19:22:30.320326 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m19:22:30.320684 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m19:22:30.327579 [debug] [Thread-1 (]: SQL status: BEGIN in 0.009 seconds
+[0m19:22:30.327935 [debug] [Thread-1 (]: Using postgres connection "model.data_models.stg_order_items"
+[0m19:22:30.328176 [debug] [Thread-3 (]: SQL status: BEGIN in 0.008 seconds
+[0m19:22:30.328744 [debug] [Thread-1 (]: On model.data_models.stg_order_items: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_order_items"} */
+
+  create view "primary_app_db"."public_staging"."stg_order_items__dbt_tmp"
+    
+    
+  as (
+    -- data_models/models/staging/stg_order_items.sql
+
+
+
+SELECT
+    -- 1. Identifier Renaming
+    id AS order_item_pk,
+    order_id AS order_pk,
+    product_id AS product_pk,
+
+    -- 2. Type Casting and Validation
+    quantity,
+    CAST(unit_price_at_sale AS NUMERIC(10, 2)) AS unit_price_at_sale,
+    
+    -- 3. Source Metadata
+    'postgres_raw' AS source_system
+    
+FROM
+    "primary_app_db"."public"."raw_order_items"
+  );
+[0m19:22:30.329049 [debug] [Thread-2 (]: SQL status: BEGIN in 0.008 seconds
+[0m19:22:30.329378 [debug] [Thread-3 (]: Using postgres connection "model.data_models.stg_products"
+[0m19:22:30.329844 [debug] [Thread-2 (]: Using postgres connection "model.data_models.stg_orders"
+[0m19:22:30.330250 [debug] [Thread-3 (]: On model.data_models.stg_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_products"} */
+
+  create view "primary_app_db"."public_staging"."stg_products__dbt_tmp"
+    
+    
+  as (
+    -- data_models/models/staging/stg_products.sql
+
+-- Set the materialization as view for quick development/light queries
+
+
+SELECT
+    -- 1. Primary Key/Identifier Renaming
+    id AS product_pk, -- 'pk' for primary key in the source system (raw table)
+    
+    -- 2. Cleaning and Standardizing Identifiers
+    UPPER(product_sku) AS product_sku, -- Ensure SKUs are consistently uppercase
+    
+    -- 3. Core Attributes (Simple pass-through)
+    product_name,
+    category_id,
+    
+    -- 4. Type Casting/Formatting
+    CAST(unit_price AS NUMERIC(10, 2)) AS unit_price,
+    current_stock,
+    is_active,
+    
+    -- 5. Timestamp Standardization
+    created_timestamp,
+    
+    -- 6. Source Metadata (Useful for data lineage/debugging)
+    'postgres_raw' AS source_system
+    
+FROM
+    -- Reference the RAW table in the PostgreSQL database
+    "primary_app_db"."public"."raw_products"
+  );
+[0m19:22:30.330732 [debug] [Thread-2 (]: On model.data_models.stg_orders: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_orders"} */
+
+  create view "primary_app_db"."public_staging"."stg_orders__dbt_tmp"
+    
+    
+  as (
+    -- data_models/models/staging/stg_orders.sql
+
+
+
+SELECT
+    -- 1. Identifier Renaming
+    id AS order_pk,
+    customer_id,
+    
+    -- 2. Cleaning and Standardization
+    TRIM(order_status) AS order_status, -- Remove accidental whitespace
+    
+    -- 3. Timestamp Standardization
+    order_timestamp,
+    
+    -- 4. Type Casting
+    CAST(total_paid AS NUMERIC(10, 2)) AS total_paid_amount,
+    
+    -- 5. Source Metadata
+    'postgres_raw' AS source_system
+    
+FROM
+    "primary_app_db"."public"."raw_orders"
+  );
+[0m19:22:30.331076 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.001 seconds
+[0m19:22:30.337081 [debug] [Thread-1 (]: Using postgres connection "model.data_models.stg_order_items"
+[0m19:22:30.337346 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.006 seconds
+[0m19:22:30.337604 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.006 seconds
+[0m19:22:30.337945 [debug] [Thread-1 (]: On model.data_models.stg_order_items: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_order_items"} */
+alter table "primary_app_db"."public_staging"."stg_order_items__dbt_tmp" rename to "stg_order_items"
+[0m19:22:30.340033 [debug] [Thread-2 (]: Using postgres connection "model.data_models.stg_orders"
+[0m19:22:30.342093 [debug] [Thread-3 (]: Using postgres connection "model.data_models.stg_products"
+[0m19:22:30.342545 [debug] [Thread-2 (]: On model.data_models.stg_orders: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_orders"} */
+alter table "primary_app_db"."public_staging"."stg_orders__dbt_tmp" rename to "stg_orders"
+[0m19:22:30.342825 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m19:22:30.343108 [debug] [Thread-3 (]: On model.data_models.stg_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_products"} */
+alter table "primary_app_db"."public_staging"."stg_products__dbt_tmp" rename to "stg_products"
+[0m19:22:30.349762 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.006 seconds
+[0m19:22:30.354673 [debug] [Thread-1 (]: On model.data_models.stg_order_items: COMMIT
+[0m19:22:30.355840 [debug] [Thread-2 (]: On model.data_models.stg_orders: COMMIT
+[0m19:22:30.356124 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m19:22:30.356442 [debug] [Thread-1 (]: Using postgres connection "model.data_models.stg_order_items"
+[0m19:22:30.356779 [debug] [Thread-2 (]: Using postgres connection "model.data_models.stg_orders"
+[0m19:22:30.357831 [debug] [Thread-3 (]: On model.data_models.stg_products: COMMIT
+[0m19:22:30.358786 [debug] [Thread-3 (]: Using postgres connection "model.data_models.stg_products"
+[0m19:22:30.358479 [debug] [Thread-2 (]: On model.data_models.stg_orders: COMMIT
+[0m19:22:30.358145 [debug] [Thread-1 (]: On model.data_models.stg_order_items: COMMIT
+[0m19:22:30.359077 [debug] [Thread-3 (]: On model.data_models.stg_products: COMMIT
+[0m19:22:30.359842 [debug] [Thread-2 (]: SQL status: COMMIT in 0.000 seconds
+[0m19:22:30.360109 [debug] [Thread-3 (]: SQL status: COMMIT in 0.000 seconds
+[0m19:22:30.360345 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m19:22:30.364703 [debug] [Thread-2 (]: Applying DROP to: "primary_app_db"."public_staging"."stg_orders__dbt_backup"
+[0m19:22:30.366295 [debug] [Thread-3 (]: Applying DROP to: "primary_app_db"."public_staging"."stg_products__dbt_backup"
+[0m19:22:30.371820 [debug] [Thread-3 (]: Using postgres connection "model.data_models.stg_products"
+[0m19:22:30.371318 [debug] [Thread-2 (]: Using postgres connection "model.data_models.stg_orders"
+[0m19:22:30.367765 [debug] [Thread-1 (]: Applying DROP to: "primary_app_db"."public_staging"."stg_order_items__dbt_backup"
+[0m19:22:30.372955 [debug] [Thread-1 (]: Using postgres connection "model.data_models.stg_order_items"
+[0m19:22:30.372497 [debug] [Thread-2 (]: On model.data_models.stg_orders: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_orders"} */
+drop view if exists "primary_app_db"."public_staging"."stg_orders__dbt_backup" cascade
+[0m19:22:30.372132 [debug] [Thread-3 (]: On model.data_models.stg_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_products"} */
+drop view if exists "primary_app_db"."public_staging"."stg_products__dbt_backup" cascade
+[0m19:22:30.373272 [debug] [Thread-1 (]: On model.data_models.stg_order_items: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_order_items"} */
+drop view if exists "primary_app_db"."public_staging"."stg_order_items__dbt_backup" cascade
+[0m19:22:30.373804 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m19:22:30.374084 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m19:22:30.374400 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m19:22:30.376209 [debug] [Thread-2 (]: On model.data_models.stg_orders: Close
+[0m19:22:30.377254 [debug] [Thread-3 (]: On model.data_models.stg_products: Close
+[0m19:22:30.378235 [debug] [Thread-1 (]: On model.data_models.stg_order_items: Close
+[0m19:22:30.379776 [info ] [Thread-2 (]: 2 of 5 OK created sql view model public_staging.stg_orders ..................... [[32mCREATE VIEW[0m in 0.11s]
+[0m19:22:30.380339 [info ] [Thread-3 (]: 3 of 5 OK created sql view model public_staging.stg_products ................... [[32mCREATE VIEW[0m in 0.11s]
+[0m19:22:30.382142 [debug] [Thread-3 (]: Finished running node model.data_models.stg_products
+[0m19:22:30.381665 [debug] [Thread-2 (]: Finished running node model.data_models.stg_orders
+[0m19:22:30.380970 [info ] [Thread-1 (]: 1 of 5 OK created sql view model public_staging.stg_order_items ................ [[32mCREATE VIEW[0m in 0.11s]
+[0m19:22:30.382746 [debug] [Thread-2 (]: Began running node model.data_models.dim_products
+[0m19:22:30.383233 [debug] [Thread-1 (]: Finished running node model.data_models.stg_order_items
+[0m19:22:30.383629 [info ] [Thread-2 (]: 4 of 5 START sql table model public_analytics.dim_products ..................... [RUN]
+[0m19:22:30.384179 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.data_models.stg_orders, now model.data_models.dim_products)
+[0m19:22:30.384505 [debug] [Thread-2 (]: Began compiling node model.data_models.dim_products
+[0m19:22:30.386668 [debug] [Thread-2 (]: Writing injected SQL for node "model.data_models.dim_products"
+[0m19:22:30.387695 [debug] [Thread-2 (]: Began executing node model.data_models.dim_products
+[0m19:22:30.404081 [debug] [Thread-2 (]: Writing runtime sql for node "model.data_models.dim_products"
+[0m19:22:30.404963 [debug] [Thread-2 (]: Using postgres connection "model.data_models.dim_products"
+[0m19:22:30.405267 [debug] [Thread-2 (]: On model.data_models.dim_products: BEGIN
+[0m19:22:30.405537 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m19:22:30.410554 [debug] [Thread-2 (]: SQL status: BEGIN in 0.005 seconds
+[0m19:22:30.410855 [debug] [Thread-2 (]: Using postgres connection "model.data_models.dim_products"
+[0m19:22:30.411174 [debug] [Thread-2 (]: On model.data_models.dim_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.dim_products"} */
+
+  
+    
+
+  create  table "primary_app_db"."public_analytics"."dim_products__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- data_models/models/marts/dim_products.sql
+
+-- Materialize as a table for fast read performance in Power BI
+
+
+SELECT
+    -- Final Unique Identifier for Power BI (Dimension Key)
+    product_pk, 
+    
+    -- Core Product Attributes
+    product_sku,
+    product_name,
+    
+    -- Descriptive Attributes
+    CASE
+        WHEN category_id = 1 THEN 'Electronics'
+        WHEN category_id = 2 THEN 'Apparel'
+        ELSE 'Other' 
+    END AS product_category_name, -- Logic to translate raw FK to a user-friendly name
+    
+    -- Price and Status
+    unit_price AS current_unit_price,
+    current_stock,
+    is_active,
+    
+    -- Metadata/History
+    created_timestamp
+    
+FROM
+    "primary_app_db"."public_staging"."stg_products"
+
+-- Optional: Add a unique constraint check to ensure dimension integrity
+-- You would typically add this to a 'schema.yml' file for testing
+  );
+  
+[0m19:22:30.413726 [debug] [Thread-2 (]: SQL status: SELECT 0 in 0.002 seconds
+[0m19:22:30.415850 [debug] [Thread-2 (]: Using postgres connection "model.data_models.dim_products"
+[0m19:22:30.416190 [debug] [Thread-2 (]: On model.data_models.dim_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.dim_products"} */
+alter table "primary_app_db"."public_analytics"."dim_products__dbt_tmp" rename to "dim_products"
+[0m19:22:30.416865 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m19:22:30.420578 [debug] [Thread-2 (]: On model.data_models.dim_products: COMMIT
+[0m19:22:30.420864 [debug] [Thread-2 (]: Using postgres connection "model.data_models.dim_products"
+[0m19:22:30.421130 [debug] [Thread-2 (]: On model.data_models.dim_products: COMMIT
+[0m19:22:30.421779 [debug] [Thread-2 (]: SQL status: COMMIT in 0.000 seconds
+[0m19:22:30.424068 [debug] [Thread-2 (]: Applying DROP to: "primary_app_db"."public_analytics"."dim_products__dbt_backup"
+[0m19:22:30.426097 [debug] [Thread-2 (]: Using postgres connection "model.data_models.dim_products"
+[0m19:22:30.426411 [debug] [Thread-2 (]: On model.data_models.dim_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.dim_products"} */
+drop table if exists "primary_app_db"."public_analytics"."dim_products__dbt_backup" cascade
+[0m19:22:30.426795 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m19:22:30.427827 [debug] [Thread-2 (]: On model.data_models.dim_products: Close
+[0m19:22:30.428435 [info ] [Thread-2 (]: 4 of 5 OK created sql table model public_analytics.dim_products ................ [[32mSELECT 0[0m in 0.04s]
+[0m19:22:30.428989 [debug] [Thread-2 (]: Finished running node model.data_models.dim_products
+[0m19:22:30.430212 [debug] [Thread-3 (]: Began running node model.data_models.fact_sales
+[0m19:22:30.430586 [info ] [Thread-3 (]: 5 of 5 START sql table model public_analytics.fact_sales ....................... [RUN]
+[0m19:22:30.430945 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.data_models.stg_products, now model.data_models.fact_sales)
+[0m19:22:30.431234 [debug] [Thread-3 (]: Began compiling node model.data_models.fact_sales
+[0m19:22:30.434262 [debug] [Thread-3 (]: Writing injected SQL for node "model.data_models.fact_sales"
+[0m19:22:30.435045 [debug] [Thread-3 (]: Began executing node model.data_models.fact_sales
+[0m19:22:30.437158 [debug] [Thread-3 (]: Writing runtime sql for node "model.data_models.fact_sales"
+[0m19:22:30.437902 [debug] [Thread-3 (]: Using postgres connection "model.data_models.fact_sales"
+[0m19:22:30.438188 [debug] [Thread-3 (]: On model.data_models.fact_sales: BEGIN
+[0m19:22:30.438453 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m19:22:30.443379 [debug] [Thread-3 (]: SQL status: BEGIN in 0.005 seconds
+[0m19:22:30.443680 [debug] [Thread-3 (]: Using postgres connection "model.data_models.fact_sales"
+[0m19:22:30.444034 [debug] [Thread-3 (]: On model.data_models.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.fact_sales"} */
+
+  
+    
+
+  create  table "primary_app_db"."public_analytics"."fact_sales__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- data_models/models/marts/fact_sales.sql
+
+-- Materialize as a table for the best query performance in Power BI
+
+
+WITH items AS (
+    SELECT * FROM "primary_app_db"."public_staging"."stg_order_items" 
+),
+
+orders AS (
+    SELECT * FROM "primary_app_db"."public_staging"."stg_orders"
+),
+
+products AS (
+    -- Reference the clean dimension table to pull in descriptive data
+    SELECT 
+        product_pk, 
+        product_sku,
+        product_category_name -- Pulling the clean, categorized name from dim_products
+    FROM 
+        "primary_app_db"."public_analytics"."dim_products"
+)
+
+SELECT
+    -- 1. Foreign Keys (To link to the Dimension Tables)
+    o.order_pk AS order_key,
+    o.customer_id AS customer_key, -- Assumes a dim_customers table for lookup
+    i.product_pk AS product_key,
+
+    -- 2. Date/Time Dimensions (For temporal slicing and dicing)
+    o.order_timestamp AS sales_timestamp,
+    CAST(o.order_timestamp AS DATE) AS sales_date, -- For easy date filtering
+
+    -- 3. Measures (The core business metrics to be aggregated)
+    i.quantity AS units_sold,
+    i.unit_price_at_sale,
+    (i.quantity * i.unit_price_at_sale) AS gross_revenue_amount,
+    
+    -- 4. Descriptive Attributes (Denormalized into the fact for reporting convenience)
+    p.product_sku,
+    p.product_category_name,
+
+    -- 5. Status and Lineage
+    o.order_status,
+    o.source_system AS source_system
+    
+FROM
+    items i
+INNER JOIN
+    orders o 
+    ON i.order_pk = o.order_pk
+LEFT JOIN
+    products p
+    ON i.product_pk = p.product_pk
+
+WHERE
+    -- CRITICAL BUSINESS LOGIC: Ensure data integrity by only including transactions that are completed
+    o.order_status = 'Delivered' 
+    -- Filter out any future-dated orders or garbage data
+    AND o.order_timestamp <= NOW()
+  );
+  
+[0m19:22:30.447346 [debug] [Thread-3 (]: SQL status: SELECT 0 in 0.003 seconds
+[0m19:22:30.449571 [debug] [Thread-3 (]: Using postgres connection "model.data_models.fact_sales"
+[0m19:22:30.449864 [debug] [Thread-3 (]: On model.data_models.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.fact_sales"} */
+alter table "primary_app_db"."public_analytics"."fact_sales__dbt_tmp" rename to "fact_sales"
+[0m19:22:30.450284 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m19:22:30.451341 [debug] [Thread-3 (]: On model.data_models.fact_sales: COMMIT
+[0m19:22:30.451622 [debug] [Thread-3 (]: Using postgres connection "model.data_models.fact_sales"
+[0m19:22:30.451917 [debug] [Thread-3 (]: On model.data_models.fact_sales: COMMIT
+[0m19:22:30.452408 [debug] [Thread-3 (]: SQL status: COMMIT in 0.000 seconds
+[0m19:22:30.453934 [debug] [Thread-3 (]: Applying DROP to: "primary_app_db"."public_analytics"."fact_sales__dbt_backup"
+[0m19:22:30.454384 [debug] [Thread-3 (]: Using postgres connection "model.data_models.fact_sales"
+[0m19:22:30.454690 [debug] [Thread-3 (]: On model.data_models.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.fact_sales"} */
+drop table if exists "primary_app_db"."public_analytics"."fact_sales__dbt_backup" cascade
+[0m19:22:30.455051 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m19:22:30.456092 [debug] [Thread-3 (]: On model.data_models.fact_sales: Close
+[0m19:22:30.456690 [info ] [Thread-3 (]: 5 of 5 OK created sql table model public_analytics.fact_sales .................. [[32mSELECT 0[0m in 0.03s]
+[0m19:22:30.457197 [debug] [Thread-3 (]: Finished running node model.data_models.fact_sales
+[0m19:22:30.458466 [debug] [MainThread]: Using postgres connection "master"
+[0m19:22:30.458793 [debug] [MainThread]: On master: BEGIN
+[0m19:22:30.459066 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:22:30.463969 [debug] [MainThread]: SQL status: BEGIN in 0.005 seconds
+[0m19:22:30.464429 [debug] [MainThread]: On master: COMMIT
+[0m19:22:30.464707 [debug] [MainThread]: Using postgres connection "master"
+[0m19:22:30.464956 [debug] [MainThread]: On master: COMMIT
+[0m19:22:30.465255 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m19:22:30.465514 [debug] [MainThread]: On master: Close
+[0m19:22:30.465855 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:22:30.466104 [debug] [MainThread]: Connection 'model.data_models.dim_products' was properly closed.
+[0m19:22:30.466326 [debug] [MainThread]: Connection 'model.data_models.stg_order_items' was properly closed.
+[0m19:22:30.466577 [debug] [MainThread]: Connection 'model.data_models.fact_sales' was properly closed.
+[0m19:22:30.467087 [info ] [MainThread]: 
+[0m19:22:30.467417 [info ] [MainThread]: Finished running 2 table models, 3 view models in 0 hours 0 minutes and 0.38 seconds (0.38s).
+[0m19:22:30.468580 [debug] [MainThread]: Command end result
+[0m19:22:30.487795 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/dbt_project/target/manifest.json
+[0m19:22:30.489157 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/dbt_project/target/semantic_manifest.json
+[0m19:22:30.494273 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/dbt_project/target/run_results.json
+[0m19:22:30.494550 [info ] [MainThread]: 
+[0m19:22:30.494886 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:22:30.495181 [info ] [MainThread]: 
+[0m19:22:30.495530 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[0m19:22:30.496673 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.7062204, "process_in_blocks": "0", "process_kernel_time": 0.114061, "process_mem_max_rss": "132332", "process_out_blocks": "2748", "process_user_time": 2.511357}
+[0m19:22:30.497114 [debug] [MainThread]: Command `dbt run` succeeded at 19:22:30.497025 after 1.71 seconds
+[0m19:22:30.497413 [debug] [MainThread]: Flushing usage events
+
+
+============================== 19:57:45.777711 | fdfb456f-8fc3-4447-b70c-69719450fa74 ==============================
+[0m19:57:45.777711 [info ] [MainThread]: Running with dbt=1.9.0
+[0m19:57:45.785624 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/usr/app/dbt_project', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/usr/app/dbt_project/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt debug --target prod', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m19:57:45.786226 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m19:57:45.792899 [info ] [MainThread]: dbt version: 1.9.0
+[0m19:57:45.793257 [info ] [MainThread]: python version: 3.12.4
+[0m19:57:45.793545 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m19:57:45.793808 [info ] [MainThread]: os info: Linux-6.12.5-linuxkit-x86_64-with-glibc2.31
+[0m19:57:45.860908 [info ] [MainThread]: Using profiles dir at /usr/app/dbt_project
+[0m19:57:45.861508 [info ] [MainThread]: Using profiles.yml file at /usr/app/dbt_project/profiles.yml
+[0m19:57:45.861856 [info ] [MainThread]: Using dbt_project.yml file at /usr/app/dbt_project/dbt_project.yml
+[0m19:57:45.862379 [info ] [MainThread]: adapter type: postgres
+[0m19:57:45.862701 [info ] [MainThread]: adapter version: 1.9.0
+[0m19:57:45.962589 [info ] [MainThread]: Configuration:
+[0m19:57:45.963181 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:57:45.963582 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:57:45.963923 [info ] [MainThread]: Required dependencies:
+[0m19:57:45.964468 [debug] [MainThread]: Executing "git --help"
+[0m19:57:45.983050 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:57:45.983862 [debug] [MainThread]: STDERR: "b''"
+[0m19:57:45.984231 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:57:45.984562 [info ] [MainThread]: Connection:
+[0m19:57:45.984915 [info ] [MainThread]:   host: db
+[0m19:57:45.985234 [info ] [MainThread]:   port: 5432
+[0m19:57:45.985504 [info ] [MainThread]:   user: prod_app_user_2025
+[0m19:57:45.985795 [info ] [MainThread]:   database: primary_app_db
+[0m19:57:45.986098 [info ] [MainThread]:   schema: public
+[0m19:57:45.986353 [info ] [MainThread]:   connect_timeout: 10
+[0m19:57:45.986604 [info ] [MainThread]:   role: None
+[0m19:57:45.986889 [info ] [MainThread]:   search_path: None
+[0m19:57:45.987215 [info ] [MainThread]:   keepalives_idle: 0
+[0m19:57:45.987502 [info ] [MainThread]:   sslmode: None
+[0m19:57:45.987759 [info ] [MainThread]:   sslcert: None
+[0m19:57:45.988046 [info ] [MainThread]:   sslkey: None
+[0m19:57:45.988306 [info ] [MainThread]:   sslrootcert: None
+[0m19:57:45.988566 [info ] [MainThread]:   application_name: dbt
+[0m19:57:45.988838 [info ] [MainThread]:   retries: 1
+[0m19:57:45.989350 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m19:57:46.040241 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m19:57:46.075491 [debug] [MainThread]: Using postgres connection "debug"
+[0m19:57:46.079050 [debug] [MainThread]: On debug: select 1 as id
+[0m19:57:46.079407 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:57:46.124068 [debug] [MainThread]: SQL status: SELECT 1 in 0.044 seconds
+[0m19:57:46.125428 [debug] [MainThread]: On debug: Close
+[0m19:57:46.125903 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m19:57:46.126290 [info ] [MainThread]: [32mAll checks passed![0m
+[0m19:57:46.129516 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.41839725, "process_in_blocks": "0", "process_kernel_time": 0.139023, "process_mem_max_rss": "119504", "process_out_blocks": "12", "process_user_time": 1.278217}
+[0m19:57:46.130066 [debug] [MainThread]: Command `dbt debug` succeeded at 19:57:46.129965 after 0.42 seconds
+[0m19:57:46.130492 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:57:46.130977 [debug] [MainThread]: Flushing usage events
+
+
+============================== 19:57:47.334817 | f5f281d0-00a7-4ecd-bab8-57bb0a7bfa12 ==============================
+[0m19:57:47.334817 [info ] [MainThread]: Running with dbt=1.9.0
+[0m19:57:47.341817 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/usr/app/dbt_project/logs', 'fail_fast': 'False', 'profiles_dir': '/usr/app/dbt_project', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --target prod', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m19:57:47.342443 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m19:57:47.523225 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m19:57:47.581544 [debug] [MainThread]: checksum: 5e136c6ef973c3d2d7bca0f5b88d13d58073133b7e7d38a3e8d0aac8e6391733, vars: {}, profile: , target: prod, version: 1.9.0
+[0m19:57:47.665652 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m19:57:48.640259 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/dbt_project/target/manifest.json
+[0m19:57:48.642829 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/dbt_project/target/semantic_manifest.json
+[0m19:57:48.658494 [info ] [MainThread]: Found 5 models, 3 sources, 429 macros
+[0m19:57:48.660498 [info ] [MainThread]: 
+[0m19:57:48.660896 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m19:57:48.661201 [info ] [MainThread]: 
+[0m19:57:48.661757 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m19:57:48.666382 [debug] [ThreadPool]: Acquiring new postgres connection 'list_primary_app_db'
+[0m19:57:48.667134 [debug] [ThreadPool]: Acquiring new postgres connection 'list_primary_app_db'
+[0m19:57:48.721677 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db"
+[0m19:57:48.722386 [debug] [ThreadPool]: On list_primary_app_db: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "list_primary_app_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m19:57:48.722039 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db"
+[0m19:57:48.723070 [debug] [ThreadPool]: On list_primary_app_db: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "list_primary_app_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m19:57:48.722708 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:57:48.723367 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:57:48.775496 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.052 seconds
+[0m19:57:48.775875 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.052 seconds
+[0m19:57:48.777435 [debug] [ThreadPool]: On list_primary_app_db: Close
+[0m19:57:48.778561 [debug] [ThreadPool]: On list_primary_app_db: Close
+[0m19:57:48.781172 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_primary_app_db, now list_primary_app_db_public_analytics)
+[0m19:57:48.781611 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_primary_app_db, now list_primary_app_db_public_staging)
+[0m19:57:48.786104 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db_public_analytics"
+[0m19:57:48.787395 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db_public_staging"
+[0m19:57:48.787810 [debug] [ThreadPool]: On list_primary_app_db_public_analytics: BEGIN
+[0m19:57:48.788259 [debug] [ThreadPool]: On list_primary_app_db_public_staging: BEGIN
+[0m19:57:48.788545 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:57:48.788824 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:57:48.794611 [debug] [ThreadPool]: SQL status: BEGIN in 0.006 seconds
+[0m19:57:48.795039 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db_public_analytics"
+[0m19:57:48.796842 [debug] [ThreadPool]: On list_primary_app_db_public_analytics: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "list_primary_app_db_public_analytics"} */
+select
+      'primary_app_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_analytics'
+    union all
+    select
+      'primary_app_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_analytics'
+    union all
+    select
+      'primary_app_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_analytics'
+  
+[0m19:57:48.797444 [debug] [ThreadPool]: SQL status: BEGIN in 0.009 seconds
+[0m19:57:48.797733 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db_public_staging"
+[0m19:57:48.798017 [debug] [ThreadPool]: On list_primary_app_db_public_staging: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "list_primary_app_db_public_staging"} */
+select
+      'primary_app_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'primary_app_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'primary_app_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+  
+[0m19:57:48.799502 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.002 seconds
+[0m19:57:48.800635 [debug] [ThreadPool]: On list_primary_app_db_public_analytics: ROLLBACK
+[0m19:57:48.800877 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.003 seconds
+[0m19:57:48.802237 [debug] [ThreadPool]: On list_primary_app_db_public_staging: ROLLBACK
+[0m19:57:48.801348 [debug] [ThreadPool]: On list_primary_app_db_public_analytics: Close
+[0m19:57:48.802603 [debug] [ThreadPool]: On list_primary_app_db_public_staging: Close
+[0m19:57:48.808128 [debug] [MainThread]: Using postgres connection "master"
+[0m19:57:48.808475 [debug] [MainThread]: On master: BEGIN
+[0m19:57:48.808765 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:57:48.814074 [debug] [MainThread]: SQL status: BEGIN in 0.005 seconds
+[0m19:57:48.814365 [debug] [MainThread]: Using postgres connection "master"
+[0m19:57:48.814729 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m19:57:48.817954 [debug] [MainThread]: SQL status: SELECT 3 in 0.003 seconds
+[0m19:57:48.819319 [debug] [MainThread]: On master: ROLLBACK
+[0m19:57:48.819668 [debug] [MainThread]: Using postgres connection "master"
+[0m19:57:48.819944 [debug] [MainThread]: On master: BEGIN
+[0m19:57:48.820333 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m19:57:48.820600 [debug] [MainThread]: On master: COMMIT
+[0m19:57:48.820856 [debug] [MainThread]: Using postgres connection "master"
+[0m19:57:48.821124 [debug] [MainThread]: On master: COMMIT
+[0m19:57:48.821461 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m19:57:48.821771 [debug] [MainThread]: On master: Close
+[0m19:57:48.823806 [debug] [Thread-1 (]: Began running node model.data_models.stg_order_items
+[0m19:57:48.824102 [debug] [Thread-2 (]: Began running node model.data_models.stg_orders
+[0m19:57:48.824373 [debug] [Thread-3 (]: Began running node model.data_models.stg_products
+[0m19:57:48.824824 [info ] [Thread-1 (]: 1 of 5 START sql view model public_staging.stg_order_items ..................... [RUN]
+[0m19:57:48.825371 [info ] [Thread-2 (]: 2 of 5 START sql view model public_staging.stg_orders .......................... [RUN]
+[0m19:57:48.825819 [info ] [Thread-3 (]: 3 of 5 START sql view model public_staging.stg_products ........................ [RUN]
+[0m19:57:48.826181 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_primary_app_db_public_staging, now model.data_models.stg_order_items)
+[0m19:57:48.826553 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_primary_app_db_public_analytics, now model.data_models.stg_orders)
+[0m19:57:48.827001 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.data_models.stg_products'
+[0m19:57:48.827315 [debug] [Thread-1 (]: Began compiling node model.data_models.stg_order_items
+[0m19:57:48.827646 [debug] [Thread-2 (]: Began compiling node model.data_models.stg_orders
+[0m19:57:48.827987 [debug] [Thread-3 (]: Began compiling node model.data_models.stg_products
+[0m19:57:48.833769 [debug] [Thread-1 (]: Writing injected SQL for node "model.data_models.stg_order_items"
+[0m19:57:48.835776 [debug] [Thread-2 (]: Writing injected SQL for node "model.data_models.stg_orders"
+[0m19:57:48.837681 [debug] [Thread-3 (]: Writing injected SQL for node "model.data_models.stg_products"
+[0m19:57:48.839364 [debug] [Thread-1 (]: Began executing node model.data_models.stg_order_items
+[0m19:57:48.839722 [debug] [Thread-2 (]: Began executing node model.data_models.stg_orders
+[0m19:57:48.866134 [debug] [Thread-3 (]: Began executing node model.data_models.stg_products
+[0m19:57:48.870317 [debug] [Thread-2 (]: Writing runtime sql for node "model.data_models.stg_orders"
+[0m19:57:48.871219 [debug] [Thread-1 (]: Writing runtime sql for node "model.data_models.stg_order_items"
+[0m19:57:48.873477 [debug] [Thread-3 (]: Writing runtime sql for node "model.data_models.stg_products"
+[0m19:57:48.875109 [debug] [Thread-2 (]: Using postgres connection "model.data_models.stg_orders"
+[0m19:57:48.875399 [debug] [Thread-1 (]: Using postgres connection "model.data_models.stg_order_items"
+[0m19:57:48.875747 [debug] [Thread-3 (]: Using postgres connection "model.data_models.stg_products"
+[0m19:57:48.875986 [debug] [Thread-2 (]: On model.data_models.stg_orders: BEGIN
+[0m19:57:48.876281 [debug] [Thread-1 (]: On model.data_models.stg_order_items: BEGIN
+[0m19:57:48.877164 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:57:48.876876 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m19:57:48.876571 [debug] [Thread-3 (]: On model.data_models.stg_products: BEGIN
+[0m19:57:48.877797 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m19:57:48.882849 [debug] [Thread-2 (]: SQL status: BEGIN in 0.006 seconds
+[0m19:57:48.883161 [debug] [Thread-3 (]: SQL status: BEGIN in 0.005 seconds
+[0m19:57:48.883473 [debug] [Thread-2 (]: Using postgres connection "model.data_models.stg_orders"
+[0m19:57:48.883768 [debug] [Thread-3 (]: Using postgres connection "model.data_models.stg_products"
+[0m19:57:48.884155 [debug] [Thread-2 (]: On model.data_models.stg_orders: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_orders"} */
+
+  create view "primary_app_db"."public_staging"."stg_orders__dbt_tmp"
+    
+    
+  as (
+    -- data_models/models/staging/stg_orders.sql
+
+
+
+SELECT
+    -- 1. Identifier Renaming
+    id AS order_pk,
+    customer_id,
+    
+    -- 2. Cleaning and Standardization
+    TRIM(order_status) AS order_status, -- Remove accidental whitespace
+    
+    -- 3. Timestamp Standardization
+    order_timestamp,
+    
+    -- 4. Type Casting
+    CAST(total_paid AS NUMERIC(10, 2)) AS total_paid_amount,
+    
+    -- 5. Source Metadata
+    'postgres_raw' AS source_system
+    
+FROM
+    "primary_app_db"."public"."raw_orders"
+  );
+[0m19:57:48.884520 [debug] [Thread-3 (]: On model.data_models.stg_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_products"} */
+
+  create view "primary_app_db"."public_staging"."stg_products__dbt_tmp"
+    
+    
+  as (
+    -- data_models/models/staging/stg_products.sql
+
+-- Set the materialization as view for quick development/light queries
+
+
+SELECT
+    -- 1. Primary Key/Identifier Renaming
+    id AS product_pk, -- 'pk' for primary key in the source system (raw table)
+    
+    -- 2. Cleaning and Standardizing Identifiers
+    UPPER(product_sku) AS product_sku, -- Ensure SKUs are consistently uppercase
+    
+    -- 3. Core Attributes (Simple pass-through)
+    product_name,
+    category_id,
+    
+    -- 4. Type Casting/Formatting
+    CAST(unit_price AS NUMERIC(10, 2)) AS unit_price,
+    current_stock,
+    is_active,
+    
+    -- 5. Timestamp Standardization
+    created_timestamp,
+    
+    -- 6. Source Metadata (Useful for data lineage/debugging)
+    'postgres_raw' AS source_system
+    
+FROM
+    -- Reference the RAW table in the PostgreSQL database
+    "primary_app_db"."public"."raw_products"
+  );
+[0m19:57:48.885625 [debug] [Thread-1 (]: SQL status: BEGIN in 0.008 seconds
+[0m19:57:48.886149 [debug] [Thread-1 (]: Using postgres connection "model.data_models.stg_order_items"
+[0m19:57:48.887300 [debug] [Thread-1 (]: On model.data_models.stg_order_items: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_order_items"} */
+
+  create view "primary_app_db"."public_staging"."stg_order_items__dbt_tmp"
+    
+    
+  as (
+    -- data_models/models/staging/stg_order_items.sql
+
+
+
+SELECT
+    -- 1. Identifier Renaming
+    id AS order_item_pk,
+    order_id AS order_pk,
+    product_id AS product_pk,
+
+    -- 2. Type Casting and Validation
+    quantity,
+    CAST(unit_price_at_sale AS NUMERIC(10, 2)) AS unit_price_at_sale,
+    
+    -- 3. Source Metadata
+    'postgres_raw' AS source_system
+    
+FROM
+    "primary_app_db"."public"."raw_order_items"
+  );
+[0m19:57:48.887030 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m19:57:48.886740 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m19:57:48.892598 [debug] [Thread-2 (]: Using postgres connection "model.data_models.stg_orders"
+[0m19:57:48.892906 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.005 seconds
+[0m19:57:48.894970 [debug] [Thread-3 (]: Using postgres connection "model.data_models.stg_products"
+[0m19:57:48.895342 [debug] [Thread-2 (]: On model.data_models.stg_orders: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_orders"} */
+alter table "primary_app_db"."public_staging"."stg_orders" rename to "stg_orders__dbt_backup"
+[0m19:57:48.897327 [debug] [Thread-1 (]: Using postgres connection "model.data_models.stg_order_items"
+[0m19:57:48.898071 [debug] [Thread-1 (]: On model.data_models.stg_order_items: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_order_items"} */
+alter table "primary_app_db"."public_staging"."stg_order_items" rename to "stg_order_items__dbt_backup"
+[0m19:57:48.897634 [debug] [Thread-3 (]: On model.data_models.stg_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_products"} */
+alter table "primary_app_db"."public_staging"."stg_products" rename to "stg_products__dbt_backup"
+[0m19:57:48.898329 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m19:57:48.898838 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m19:57:48.900757 [debug] [Thread-2 (]: Using postgres connection "model.data_models.stg_orders"
+[0m19:57:48.901016 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m19:57:48.903015 [debug] [Thread-1 (]: Using postgres connection "model.data_models.stg_order_items"
+[0m19:57:48.903400 [debug] [Thread-2 (]: On model.data_models.stg_orders: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_orders"} */
+alter table "primary_app_db"."public_staging"."stg_orders__dbt_tmp" rename to "stg_orders"
+[0m19:57:48.905402 [debug] [Thread-3 (]: Using postgres connection "model.data_models.stg_products"
+[0m19:57:48.906155 [debug] [Thread-3 (]: On model.data_models.stg_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_products"} */
+alter table "primary_app_db"."public_staging"."stg_products__dbt_tmp" rename to "stg_products"
+[0m19:57:48.905722 [debug] [Thread-1 (]: On model.data_models.stg_order_items: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_order_items"} */
+alter table "primary_app_db"."public_staging"."stg_order_items__dbt_tmp" rename to "stg_order_items"
+[0m19:57:48.906404 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m19:57:48.914312 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.008 seconds
+[0m19:57:48.914531 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.008 seconds
+[0m19:57:48.919710 [debug] [Thread-2 (]: On model.data_models.stg_orders: COMMIT
+[0m19:57:48.920796 [debug] [Thread-1 (]: On model.data_models.stg_order_items: COMMIT
+[0m19:57:48.922551 [debug] [Thread-1 (]: Using postgres connection "model.data_models.stg_order_items"
+[0m19:57:48.922212 [debug] [Thread-2 (]: Using postgres connection "model.data_models.stg_orders"
+[0m19:57:48.921860 [debug] [Thread-3 (]: On model.data_models.stg_products: COMMIT
+[0m19:57:48.923497 [debug] [Thread-3 (]: Using postgres connection "model.data_models.stg_products"
+[0m19:57:48.923185 [debug] [Thread-2 (]: On model.data_models.stg_orders: COMMIT
+[0m19:57:48.922846 [debug] [Thread-1 (]: On model.data_models.stg_order_items: COMMIT
+[0m19:57:48.923782 [debug] [Thread-3 (]: On model.data_models.stg_products: COMMIT
+[0m19:57:48.924542 [debug] [Thread-2 (]: SQL status: COMMIT in 0.000 seconds
+[0m19:57:48.925024 [debug] [Thread-3 (]: SQL status: COMMIT in 0.001 seconds
+[0m19:57:48.924807 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m19:57:48.929550 [debug] [Thread-2 (]: Applying DROP to: "primary_app_db"."public_staging"."stg_orders__dbt_backup"
+[0m19:57:48.931820 [debug] [Thread-3 (]: Applying DROP to: "primary_app_db"."public_staging"."stg_products__dbt_backup"
+[0m19:57:48.937455 [debug] [Thread-3 (]: Using postgres connection "model.data_models.stg_products"
+[0m19:57:48.936957 [debug] [Thread-2 (]: Using postgres connection "model.data_models.stg_orders"
+[0m19:57:48.933283 [debug] [Thread-1 (]: Applying DROP to: "primary_app_db"."public_staging"."stg_order_items__dbt_backup"
+[0m19:57:48.938620 [debug] [Thread-1 (]: Using postgres connection "model.data_models.stg_order_items"
+[0m19:57:48.938142 [debug] [Thread-2 (]: On model.data_models.stg_orders: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_orders"} */
+drop view if exists "primary_app_db"."public_staging"."stg_orders__dbt_backup" cascade
+[0m19:57:48.937771 [debug] [Thread-3 (]: On model.data_models.stg_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_products"} */
+drop view if exists "primary_app_db"."public_staging"."stg_products__dbt_backup" cascade
+[0m19:57:48.938925 [debug] [Thread-1 (]: On model.data_models.stg_order_items: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_order_items"} */
+drop view if exists "primary_app_db"."public_staging"."stg_order_items__dbt_backup" cascade
+[0m19:57:48.940783 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m19:57:48.941268 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m19:57:48.941052 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m19:57:48.943088 [debug] [Thread-2 (]: On model.data_models.stg_orders: Close
+[0m19:57:48.944103 [debug] [Thread-3 (]: On model.data_models.stg_products: Close
+[0m19:57:48.945039 [debug] [Thread-1 (]: On model.data_models.stg_order_items: Close
+[0m19:57:48.946706 [info ] [Thread-2 (]: 2 of 5 OK created sql view model public_staging.stg_orders ..................... [[32mCREATE VIEW[0m in 0.12s]
+[0m19:57:48.947168 [info ] [Thread-3 (]: 3 of 5 OK created sql view model public_staging.stg_products ................... [[32mCREATE VIEW[0m in 0.12s]
+[0m19:57:48.948699 [debug] [Thread-3 (]: Finished running node model.data_models.stg_products
+[0m19:57:48.948276 [debug] [Thread-2 (]: Finished running node model.data_models.stg_orders
+[0m19:57:48.947682 [info ] [Thread-1 (]: 1 of 5 OK created sql view model public_staging.stg_order_items ................ [[32mCREATE VIEW[0m in 0.12s]
+[0m19:57:48.949219 [debug] [Thread-4 (]: Began running node model.data_models.dim_products
+[0m19:57:48.949856 [debug] [Thread-1 (]: Finished running node model.data_models.stg_order_items
+[0m19:57:48.950306 [info ] [Thread-4 (]: 4 of 5 START sql table model public_analytics.dim_products ..................... [RUN]
+[0m19:57:48.950921 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.data_models.dim_products'
+[0m19:57:48.951266 [debug] [Thread-4 (]: Began compiling node model.data_models.dim_products
+[0m19:57:48.953601 [debug] [Thread-4 (]: Writing injected SQL for node "model.data_models.dim_products"
+[0m19:57:48.954659 [debug] [Thread-4 (]: Began executing node model.data_models.dim_products
+[0m19:57:48.970904 [debug] [Thread-4 (]: Writing runtime sql for node "model.data_models.dim_products"
+[0m19:57:48.972023 [debug] [Thread-4 (]: Using postgres connection "model.data_models.dim_products"
+[0m19:57:48.972331 [debug] [Thread-4 (]: On model.data_models.dim_products: BEGIN
+[0m19:57:48.972613 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m19:57:48.977833 [debug] [Thread-4 (]: SQL status: BEGIN in 0.005 seconds
+[0m19:57:48.978180 [debug] [Thread-4 (]: Using postgres connection "model.data_models.dim_products"
+[0m19:57:48.978663 [debug] [Thread-4 (]: On model.data_models.dim_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.dim_products"} */
+
+  
+    
+
+  create  table "primary_app_db"."public_analytics"."dim_products__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- data_models/models/marts/dim_products.sql
+
+-- Materialize as a table for fast read performance in Power BI
+
+
+SELECT
+    -- Final Unique Identifier for Power BI (Dimension Key)
+    product_pk, 
+    
+    -- Core Product Attributes
+    product_sku,
+    product_name,
+    
+    -- Descriptive Attributes
+    CASE
+        WHEN category_id = 1 THEN 'Electronics'
+        WHEN category_id = 2 THEN 'Apparel'
+        ELSE 'Other' 
+    END AS product_category_name, -- Logic to translate raw FK to a user-friendly name
+    
+    -- Price and Status
+    unit_price AS current_unit_price,
+    current_stock,
+    is_active,
+    
+    -- Metadata/History
+    created_timestamp
+    
+FROM
+    "primary_app_db"."public_staging"."stg_products"
+
+-- Optional: Add a unique constraint check to ensure dimension integrity
+-- You would typically add this to a 'schema.yml' file for testing
+  );
+  
+[0m19:57:48.981514 [debug] [Thread-4 (]: SQL status: SELECT 0 in 0.003 seconds
+[0m19:57:48.983713 [debug] [Thread-4 (]: Using postgres connection "model.data_models.dim_products"
+[0m19:57:48.984007 [debug] [Thread-4 (]: On model.data_models.dim_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.dim_products"} */
+alter table "primary_app_db"."public_analytics"."dim_products" rename to "dim_products__dbt_backup"
+[0m19:57:48.984430 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m19:57:48.986369 [debug] [Thread-4 (]: Using postgres connection "model.data_models.dim_products"
+[0m19:57:48.986643 [debug] [Thread-4 (]: On model.data_models.dim_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.dim_products"} */
+alter table "primary_app_db"."public_analytics"."dim_products__dbt_tmp" rename to "dim_products"
+[0m19:57:48.987022 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m19:57:48.990823 [debug] [Thread-4 (]: On model.data_models.dim_products: COMMIT
+[0m19:57:48.991148 [debug] [Thread-4 (]: Using postgres connection "model.data_models.dim_products"
+[0m19:57:48.991430 [debug] [Thread-4 (]: On model.data_models.dim_products: COMMIT
+[0m19:57:48.992002 [debug] [Thread-4 (]: SQL status: COMMIT in 0.000 seconds
+[0m19:57:48.993535 [debug] [Thread-4 (]: Applying DROP to: "primary_app_db"."public_analytics"."dim_products__dbt_backup"
+[0m19:57:48.995517 [debug] [Thread-4 (]: Using postgres connection "model.data_models.dim_products"
+[0m19:57:48.995810 [debug] [Thread-4 (]: On model.data_models.dim_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.dim_products"} */
+drop table if exists "primary_app_db"."public_analytics"."dim_products__dbt_backup" cascade
+[0m19:57:48.997283 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m19:57:48.998312 [debug] [Thread-4 (]: On model.data_models.dim_products: Close
+[0m19:57:48.998914 [info ] [Thread-4 (]: 4 of 5 OK created sql table model public_analytics.dim_products ................ [[32mSELECT 0[0m in 0.05s]
+[0m19:57:48.999485 [debug] [Thread-4 (]: Finished running node model.data_models.dim_products
+[0m19:57:49.000856 [debug] [Thread-3 (]: Began running node model.data_models.fact_sales
+[0m19:57:49.001374 [info ] [Thread-3 (]: 5 of 5 START sql table model public_analytics.fact_sales ....................... [RUN]
+[0m19:57:49.001705 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.data_models.stg_products, now model.data_models.fact_sales)
+[0m19:57:49.001991 [debug] [Thread-3 (]: Began compiling node model.data_models.fact_sales
+[0m19:57:49.004757 [debug] [Thread-3 (]: Writing injected SQL for node "model.data_models.fact_sales"
+[0m19:57:49.005679 [debug] [Thread-3 (]: Began executing node model.data_models.fact_sales
+[0m19:57:49.007722 [debug] [Thread-3 (]: Writing runtime sql for node "model.data_models.fact_sales"
+[0m19:57:49.008265 [debug] [Thread-3 (]: Using postgres connection "model.data_models.fact_sales"
+[0m19:57:49.008530 [debug] [Thread-3 (]: On model.data_models.fact_sales: BEGIN
+[0m19:57:49.008776 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m19:57:49.013777 [debug] [Thread-3 (]: SQL status: BEGIN in 0.005 seconds
+[0m19:57:49.014066 [debug] [Thread-3 (]: Using postgres connection "model.data_models.fact_sales"
+[0m19:57:49.014409 [debug] [Thread-3 (]: On model.data_models.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.fact_sales"} */
+
+  
+    
+
+  create  table "primary_app_db"."public_analytics"."fact_sales__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- data_models/models/marts/fact_sales.sql
+
+-- Materialize as a table for the best query performance in Power BI
+
+
+WITH items AS (
+    SELECT * FROM "primary_app_db"."public_staging"."stg_order_items" 
+),
+
+orders AS (
+    SELECT * FROM "primary_app_db"."public_staging"."stg_orders"
+),
+
+products AS (
+    -- Reference the clean dimension table to pull in descriptive data
+    SELECT 
+        product_pk, 
+        product_sku,
+        product_category_name -- Pulling the clean, categorized name from dim_products
+    FROM 
+        "primary_app_db"."public_analytics"."dim_products"
+)
+
+SELECT
+    -- 1. Foreign Keys (To link to the Dimension Tables)
+    o.order_pk AS order_key,
+    o.customer_id AS customer_key, -- Assumes a dim_customers table for lookup
+    i.product_pk AS product_key,
+
+    -- 2. Date/Time Dimensions (For temporal slicing and dicing)
+    o.order_timestamp AS sales_timestamp,
+    CAST(o.order_timestamp AS DATE) AS sales_date, -- For easy date filtering
+
+    -- 3. Measures (The core business metrics to be aggregated)
+    i.quantity AS units_sold,
+    i.unit_price_at_sale,
+    (i.quantity * i.unit_price_at_sale) AS gross_revenue_amount,
+    
+    -- 4. Descriptive Attributes (Denormalized into the fact for reporting convenience)
+    p.product_sku,
+    p.product_category_name,
+
+    -- 5. Status and Lineage
+    o.order_status,
+    o.source_system AS source_system
+    
+FROM
+    items i
+INNER JOIN
+    orders o 
+    ON i.order_pk = o.order_pk
+LEFT JOIN
+    products p
+    ON i.product_pk = p.product_pk
+
+WHERE
+    -- CRITICAL BUSINESS LOGIC: Ensure data integrity by only including transactions that are completed
+    o.order_status = 'Delivered' 
+    -- Filter out any future-dated orders or garbage data
+    AND o.order_timestamp <= NOW()
+  );
+  
+[0m19:57:49.017727 [debug] [Thread-3 (]: SQL status: SELECT 0 in 0.003 seconds
+[0m19:57:49.020105 [debug] [Thread-3 (]: Using postgres connection "model.data_models.fact_sales"
+[0m19:57:49.020390 [debug] [Thread-3 (]: On model.data_models.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.fact_sales"} */
+alter table "primary_app_db"."public_analytics"."fact_sales" rename to "fact_sales__dbt_backup"
+[0m19:57:49.020840 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m19:57:49.023656 [debug] [Thread-3 (]: Using postgres connection "model.data_models.fact_sales"
+[0m19:57:49.023988 [debug] [Thread-3 (]: On model.data_models.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.fact_sales"} */
+alter table "primary_app_db"."public_analytics"."fact_sales__dbt_tmp" rename to "fact_sales"
+[0m19:57:49.024385 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m19:57:49.025487 [debug] [Thread-3 (]: On model.data_models.fact_sales: COMMIT
+[0m19:57:49.025750 [debug] [Thread-3 (]: Using postgres connection "model.data_models.fact_sales"
+[0m19:57:49.026085 [debug] [Thread-3 (]: On model.data_models.fact_sales: COMMIT
+[0m19:57:49.026815 [debug] [Thread-3 (]: SQL status: COMMIT in 0.000 seconds
+[0m19:57:49.028308 [debug] [Thread-3 (]: Applying DROP to: "primary_app_db"."public_analytics"."fact_sales__dbt_backup"
+[0m19:57:49.028748 [debug] [Thread-3 (]: Using postgres connection "model.data_models.fact_sales"
+[0m19:57:49.029024 [debug] [Thread-3 (]: On model.data_models.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.fact_sales"} */
+drop table if exists "primary_app_db"."public_analytics"."fact_sales__dbt_backup" cascade
+[0m19:57:49.030108 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m19:57:49.031081 [debug] [Thread-3 (]: On model.data_models.fact_sales: Close
+[0m19:57:49.031644 [info ] [Thread-3 (]: 5 of 5 OK created sql table model public_analytics.fact_sales .................. [[32mSELECT 0[0m in 0.03s]
+[0m19:57:49.032172 [debug] [Thread-3 (]: Finished running node model.data_models.fact_sales
+[0m19:57:49.033306 [debug] [MainThread]: Using postgres connection "master"
+[0m19:57:49.033634 [debug] [MainThread]: On master: BEGIN
+[0m19:57:49.033945 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:57:49.038856 [debug] [MainThread]: SQL status: BEGIN in 0.005 seconds
+[0m19:57:49.039137 [debug] [MainThread]: On master: COMMIT
+[0m19:57:49.039381 [debug] [MainThread]: Using postgres connection "master"
+[0m19:57:49.039618 [debug] [MainThread]: On master: COMMIT
+[0m19:57:49.039896 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m19:57:49.040136 [debug] [MainThread]: On master: Close
+[0m19:57:49.040453 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:57:49.040688 [debug] [MainThread]: Connection 'model.data_models.stg_order_items' was properly closed.
+[0m19:57:49.040900 [debug] [MainThread]: Connection 'model.data_models.stg_orders' was properly closed.
+[0m19:57:49.041166 [debug] [MainThread]: Connection 'model.data_models.fact_sales' was properly closed.
+[0m19:57:49.041447 [debug] [MainThread]: Connection 'model.data_models.dim_products' was properly closed.
+[0m19:57:49.041975 [info ] [MainThread]: 
+[0m19:57:49.042312 [info ] [MainThread]: Finished running 2 table models, 3 view models in 0 hours 0 minutes and 0.38 seconds (0.38s).
+[0m19:57:49.043499 [debug] [MainThread]: Command end result
+[0m19:57:49.063357 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/dbt_project/target/manifest.json
+[0m19:57:49.064805 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/dbt_project/target/semantic_manifest.json
+[0m19:57:49.070126 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/dbt_project/target/run_results.json
+[0m19:57:49.070407 [info ] [MainThread]: 
+[0m19:57:49.070758 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:57:49.071037 [info ] [MainThread]: 
+[0m19:57:49.071413 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[0m19:57:49.072651 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.8056567, "process_in_blocks": "0", "process_kernel_time": 0.121578, "process_mem_max_rss": "132684", "process_out_blocks": "2634", "process_user_time": 2.680766}
+[0m19:57:49.073202 [debug] [MainThread]: Command `dbt run` succeeded at 19:57:49.073096 after 1.81 seconds
+[0m19:57:49.073521 [debug] [MainThread]: Flushing usage events
+
+
+============================== 20:03:09.358078 | 7eac988b-a36b-40c3-a335-623c492294aa ==============================
+[0m20:03:09.358078 [info ] [MainThread]: Running with dbt=1.9.0
+[0m20:03:09.367993 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/usr/app/dbt_project', 'log_path': '/usr/app/dbt_project/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug --target prod', 'send_anonymous_usage_stats': 'False'}
+[0m20:03:09.369329 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m20:03:09.376973 [info ] [MainThread]: dbt version: 1.9.0
+[0m20:03:09.377471 [info ] [MainThread]: python version: 3.12.4
+[0m20:03:09.377799 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m20:03:09.378084 [info ] [MainThread]: os info: Linux-6.12.5-linuxkit-x86_64-with-glibc2.31
+[0m20:03:09.431725 [info ] [MainThread]: Using profiles dir at /usr/app/dbt_project
+[0m20:03:09.432222 [info ] [MainThread]: Using profiles.yml file at /usr/app/dbt_project/profiles.yml
+[0m20:03:09.432580 [info ] [MainThread]: Using dbt_project.yml file at /usr/app/dbt_project/dbt_project.yml
+[0m20:03:09.433032 [info ] [MainThread]: adapter type: postgres
+[0m20:03:09.433360 [info ] [MainThread]: adapter version: 1.9.0
+[0m20:03:09.511837 [info ] [MainThread]: Configuration:
+[0m20:03:09.512268 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:03:09.512594 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:03:09.512856 [info ] [MainThread]: Required dependencies:
+[0m20:03:09.513330 [debug] [MainThread]: Executing "git --help"
+[0m20:03:09.531186 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:03:09.531820 [debug] [MainThread]: STDERR: "b''"
+[0m20:03:09.532134 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:03:09.532454 [info ] [MainThread]: Connection:
+[0m20:03:09.532761 [info ] [MainThread]:   host: db
+[0m20:03:09.533063 [info ] [MainThread]:   port: 5432
+[0m20:03:09.533345 [info ] [MainThread]:   user: prod_app_user_2025
+[0m20:03:09.533666 [info ] [MainThread]:   database: primary_app_db
+[0m20:03:09.533927 [info ] [MainThread]:   schema: public
+[0m20:03:09.534179 [info ] [MainThread]:   connect_timeout: 10
+[0m20:03:09.534460 [info ] [MainThread]:   role: None
+[0m20:03:09.534736 [info ] [MainThread]:   search_path: None
+[0m20:03:09.535004 [info ] [MainThread]:   keepalives_idle: 0
+[0m20:03:09.535270 [info ] [MainThread]:   sslmode: None
+[0m20:03:09.535566 [info ] [MainThread]:   sslcert: None
+[0m20:03:09.535848 [info ] [MainThread]:   sslkey: None
+[0m20:03:09.536110 [info ] [MainThread]:   sslrootcert: None
+[0m20:03:09.536375 [info ] [MainThread]:   application_name: dbt
+[0m20:03:09.536640 [info ] [MainThread]:   retries: 1
+[0m20:03:09.537086 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m20:03:09.588723 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m20:03:09.627846 [debug] [MainThread]: Using postgres connection "debug"
+[0m20:03:09.628386 [debug] [MainThread]: On debug: select 1 as id
+[0m20:03:09.628728 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:03:09.674340 [debug] [MainThread]: SQL status: SELECT 1 in 0.045 seconds
+[0m20:03:09.675706 [debug] [MainThread]: On debug: Close
+[0m20:03:09.676173 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:03:09.676647 [info ] [MainThread]: [32mAll checks passed![0m
+[0m20:03:09.680121 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.39026472, "process_in_blocks": "0", "process_kernel_time": 0.166337, "process_mem_max_rss": "119592", "process_out_blocks": "12", "process_user_time": 1.265567}
+[0m20:03:09.680673 [debug] [MainThread]: Command `dbt debug` succeeded at 20:03:09.680575 after 0.39 seconds
+[0m20:03:09.680987 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:03:09.681381 [debug] [MainThread]: Flushing usage events
+
+
+============================== 20:03:10.956597 | 8d173e71-e0e8-427c-bd3b-ca90367f2a3d ==============================
+[0m20:03:10.956597 [info ] [MainThread]: Running with dbt=1.9.0
+[0m20:03:10.964801 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/usr/app/dbt_project/logs', 'fail_fast': 'False', 'profiles_dir': '/usr/app/dbt_project', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt run --target prod', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m20:03:10.965526 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m20:03:11.176248 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m20:03:11.232110 [debug] [MainThread]: checksum: 5e136c6ef973c3d2d7bca0f5b88d13d58073133b7e7d38a3e8d0aac8e6391733, vars: {}, profile: , target: prod, version: 1.9.0
+[0m20:03:11.323460 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:03:11.323881 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:03:11.417030 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/dbt_project/target/manifest.json
+[0m20:03:11.420422 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/dbt_project/target/semantic_manifest.json
+[0m20:03:11.438047 [info ] [MainThread]: Found 5 models, 3 sources, 429 macros
+[0m20:03:11.440408 [info ] [MainThread]: 
+[0m20:03:11.441331 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m20:03:11.441774 [info ] [MainThread]: 
+[0m20:03:11.442452 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:03:11.447610 [debug] [ThreadPool]: Acquiring new postgres connection 'list_primary_app_db'
+[0m20:03:11.448349 [debug] [ThreadPool]: Acquiring new postgres connection 'list_primary_app_db'
+[0m20:03:11.482472 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db"
+[0m20:03:11.482853 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db"
+[0m20:03:11.483640 [debug] [ThreadPool]: On list_primary_app_db: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "list_primary_app_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:03:11.483249 [debug] [ThreadPool]: On list_primary_app_db: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "list_primary_app_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:03:11.483959 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:03:11.484238 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:03:11.541050 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.056 seconds
+[0m20:03:11.541452 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.057 seconds
+[0m20:03:11.544083 [debug] [ThreadPool]: On list_primary_app_db: Close
+[0m20:03:11.543028 [debug] [ThreadPool]: On list_primary_app_db: Close
+[0m20:03:11.546720 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_primary_app_db, now list_primary_app_db_public_staging)
+[0m20:03:11.547145 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_primary_app_db, now list_primary_app_db_public_analytics)
+[0m20:03:11.551613 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db_public_staging"
+[0m20:03:11.552905 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db_public_analytics"
+[0m20:03:11.553250 [debug] [ThreadPool]: On list_primary_app_db_public_staging: BEGIN
+[0m20:03:11.553576 [debug] [ThreadPool]: On list_primary_app_db_public_analytics: BEGIN
+[0m20:03:11.553880 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:03:11.554159 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:03:11.559830 [debug] [ThreadPool]: SQL status: BEGIN in 0.006 seconds
+[0m20:03:11.560164 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db_public_staging"
+[0m20:03:11.560394 [debug] [ThreadPool]: SQL status: BEGIN in 0.006 seconds
+[0m20:03:11.560690 [debug] [ThreadPool]: On list_primary_app_db_public_staging: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "list_primary_app_db_public_staging"} */
+select
+      'primary_app_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'primary_app_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'primary_app_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+  
+[0m20:03:11.561015 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db_public_analytics"
+[0m20:03:11.561504 [debug] [ThreadPool]: On list_primary_app_db_public_analytics: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "list_primary_app_db_public_analytics"} */
+select
+      'primary_app_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_analytics'
+    union all
+    select
+      'primary_app_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_analytics'
+    union all
+    select
+      'primary_app_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_analytics'
+  
+[0m20:03:11.563722 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.002 seconds
+[0m20:03:11.563942 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.003 seconds
+[0m20:03:11.565043 [debug] [ThreadPool]: On list_primary_app_db_public_analytics: ROLLBACK
+[0m20:03:11.566096 [debug] [ThreadPool]: On list_primary_app_db_public_staging: ROLLBACK
+[0m20:03:11.566554 [debug] [ThreadPool]: On list_primary_app_db_public_analytics: Close
+[0m20:03:11.566816 [debug] [ThreadPool]: On list_primary_app_db_public_staging: Close
+[0m20:03:11.571718 [debug] [MainThread]: Using postgres connection "master"
+[0m20:03:11.572049 [debug] [MainThread]: On master: BEGIN
+[0m20:03:11.572339 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:03:11.577614 [debug] [MainThread]: SQL status: BEGIN in 0.005 seconds
+[0m20:03:11.577921 [debug] [MainThread]: Using postgres connection "master"
+[0m20:03:11.578318 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m20:03:11.581744 [debug] [MainThread]: SQL status: SELECT 3 in 0.003 seconds
+[0m20:03:11.583018 [debug] [MainThread]: On master: ROLLBACK
+[0m20:03:11.583387 [debug] [MainThread]: Using postgres connection "master"
+[0m20:03:11.583653 [debug] [MainThread]: On master: BEGIN
+[0m20:03:11.584036 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m20:03:11.584314 [debug] [MainThread]: On master: COMMIT
+[0m20:03:11.584589 [debug] [MainThread]: Using postgres connection "master"
+[0m20:03:11.584852 [debug] [MainThread]: On master: COMMIT
+[0m20:03:11.585170 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m20:03:11.585446 [debug] [MainThread]: On master: Close
+[0m20:03:11.587446 [debug] [Thread-1 (]: Began running node model.data_models.stg_order_items
+[0m20:03:11.587728 [debug] [Thread-2 (]: Began running node model.data_models.stg_orders
+[0m20:03:11.588012 [debug] [Thread-3 (]: Began running node model.data_models.stg_products
+[0m20:03:11.588484 [info ] [Thread-1 (]: 1 of 5 START sql view model public_staging.stg_order_items ..................... [RUN]
+[0m20:03:11.589810 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_primary_app_db_public_staging, now model.data_models.stg_order_items)
+[0m20:03:11.589428 [info ] [Thread-3 (]: 3 of 5 START sql view model public_staging.stg_products ........................ [RUN]
+[0m20:03:11.588944 [info ] [Thread-2 (]: 2 of 5 START sql view model public_staging.stg_orders .......................... [RUN]
+[0m20:03:11.590128 [debug] [Thread-1 (]: Began compiling node model.data_models.stg_order_items
+[0m20:03:11.590574 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.data_models.stg_products'
+[0m20:03:11.590896 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_primary_app_db_public_analytics, now model.data_models.stg_orders)
+[0m20:03:11.596538 [debug] [Thread-1 (]: Writing injected SQL for node "model.data_models.stg_order_items"
+[0m20:03:11.596926 [debug] [Thread-3 (]: Began compiling node model.data_models.stg_products
+[0m20:03:11.597254 [debug] [Thread-2 (]: Began compiling node model.data_models.stg_orders
+[0m20:03:11.599556 [debug] [Thread-3 (]: Writing injected SQL for node "model.data_models.stg_products"
+[0m20:03:11.601653 [debug] [Thread-2 (]: Writing injected SQL for node "model.data_models.stg_orders"
+[0m20:03:11.602580 [debug] [Thread-1 (]: Began executing node model.data_models.stg_order_items
+[0m20:03:11.609607 [debug] [Thread-3 (]: Began executing node model.data_models.stg_products
+[0m20:03:11.630473 [debug] [Thread-2 (]: Began executing node model.data_models.stg_orders
+[0m20:03:11.635327 [debug] [Thread-1 (]: Writing runtime sql for node "model.data_models.stg_order_items"
+[0m20:03:11.636039 [debug] [Thread-3 (]: Writing runtime sql for node "model.data_models.stg_products"
+[0m20:03:11.638246 [debug] [Thread-2 (]: Writing runtime sql for node "model.data_models.stg_orders"
+[0m20:03:11.640005 [debug] [Thread-1 (]: Using postgres connection "model.data_models.stg_order_items"
+[0m20:03:11.640283 [debug] [Thread-3 (]: Using postgres connection "model.data_models.stg_products"
+[0m20:03:11.640673 [debug] [Thread-2 (]: Using postgres connection "model.data_models.stg_orders"
+[0m20:03:11.640900 [debug] [Thread-1 (]: On model.data_models.stg_order_items: BEGIN
+[0m20:03:11.641225 [debug] [Thread-3 (]: On model.data_models.stg_products: BEGIN
+[0m20:03:11.641586 [debug] [Thread-2 (]: On model.data_models.stg_orders: BEGIN
+[0m20:03:11.641972 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:03:11.642325 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:03:11.642610 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m20:03:11.648607 [debug] [Thread-3 (]: SQL status: BEGIN in 0.006 seconds
+[0m20:03:11.648899 [debug] [Thread-1 (]: SQL status: BEGIN in 0.007 seconds
+[0m20:03:11.649229 [debug] [Thread-3 (]: Using postgres connection "model.data_models.stg_products"
+[0m20:03:11.649641 [debug] [Thread-1 (]: Using postgres connection "model.data_models.stg_order_items"
+[0m20:03:11.650022 [debug] [Thread-3 (]: On model.data_models.stg_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_products"} */
+
+  create view "primary_app_db"."public_staging"."stg_products__dbt_tmp"
+    
+    
+  as (
+    -- data_models/models/staging/stg_products.sql
+
+-- Set the materialization as view for quick development/light queries
+
+
+SELECT
+    -- 1. Primary Key/Identifier Renaming
+    id AS product_pk, -- 'pk' for primary key in the source system (raw table)
+    
+    -- 2. Cleaning and Standardizing Identifiers
+    UPPER(product_sku) AS product_sku, -- Ensure SKUs are consistently uppercase
+    
+    -- 3. Core Attributes (Simple pass-through)
+    product_name,
+    category_id,
+    
+    -- 4. Type Casting/Formatting
+    CAST(unit_price AS NUMERIC(10, 2)) AS unit_price,
+    current_stock,
+    is_active,
+    
+    -- 5. Timestamp Standardization
+    created_timestamp,
+    
+    -- 6. Source Metadata (Useful for data lineage/debugging)
+    'postgres_raw' AS source_system
+    
+FROM
+    -- Reference the RAW table in the PostgreSQL database
+    "primary_app_db"."public"."raw_products"
+  );
+[0m20:03:11.650482 [debug] [Thread-1 (]: On model.data_models.stg_order_items: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_order_items"} */
+
+  create view "primary_app_db"."public_staging"."stg_order_items__dbt_tmp"
+    
+    
+  as (
+    -- data_models/models/staging/stg_order_items.sql
+
+
+
+SELECT
+    -- 1. Identifier Renaming
+    id AS order_item_pk,
+    order_id AS order_pk,
+    product_id AS product_pk,
+
+    -- 2. Type Casting and Validation
+    quantity,
+    CAST(unit_price_at_sale AS NUMERIC(10, 2)) AS unit_price_at_sale,
+    
+    -- 3. Source Metadata
+    'postgres_raw' AS source_system
+    
+FROM
+    "primary_app_db"."public"."raw_order_items"
+  );
+[0m20:03:11.650779 [debug] [Thread-2 (]: SQL status: BEGIN in 0.008 seconds
+[0m20:03:11.651327 [debug] [Thread-2 (]: Using postgres connection "model.data_models.stg_orders"
+[0m20:03:11.651717 [debug] [Thread-2 (]: On model.data_models.stg_orders: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_orders"} */
+
+  create view "primary_app_db"."public_staging"."stg_orders__dbt_tmp"
+    
+    
+  as (
+    -- data_models/models/staging/stg_orders.sql
+
+
+
+SELECT
+    -- 1. Identifier Renaming
+    id AS order_pk,
+    customer_id,
+    
+    -- 2. Cleaning and Standardization
+    TRIM(order_status) AS order_status, -- Remove accidental whitespace
+    
+    -- 3. Timestamp Standardization
+    order_timestamp,
+    
+    -- 4. Type Casting
+    CAST(total_paid AS NUMERIC(10, 2)) AS total_paid_amount,
+    
+    -- 5. Source Metadata
+    'postgres_raw' AS source_system
+    
+FROM
+    "primary_app_db"."public"."raw_orders"
+  );
+[0m20:03:11.653271 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m20:03:11.653589 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m20:03:11.653846 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m20:03:11.658734 [debug] [Thread-3 (]: Using postgres connection "model.data_models.stg_products"
+[0m20:03:11.660901 [debug] [Thread-1 (]: Using postgres connection "model.data_models.stg_order_items"
+[0m20:03:11.662879 [debug] [Thread-2 (]: Using postgres connection "model.data_models.stg_orders"
+[0m20:03:11.664046 [debug] [Thread-2 (]: On model.data_models.stg_orders: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_orders"} */
+alter table "primary_app_db"."public_staging"."stg_orders" rename to "stg_orders__dbt_backup"
+[0m20:03:11.663700 [debug] [Thread-1 (]: On model.data_models.stg_order_items: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_order_items"} */
+alter table "primary_app_db"."public_staging"."stg_order_items" rename to "stg_order_items__dbt_backup"
+[0m20:03:11.663265 [debug] [Thread-3 (]: On model.data_models.stg_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_products"} */
+alter table "primary_app_db"."public_staging"."stg_products" rename to "stg_products__dbt_backup"
+[0m20:03:11.664679 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m20:03:11.667080 [debug] [Thread-2 (]: Using postgres connection "model.data_models.stg_orders"
+[0m20:03:11.665193 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m20:03:11.664937 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m20:03:11.667398 [debug] [Thread-2 (]: On model.data_models.stg_orders: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_orders"} */
+alter table "primary_app_db"."public_staging"."stg_orders__dbt_tmp" rename to "stg_orders"
+[0m20:03:11.669360 [debug] [Thread-1 (]: Using postgres connection "model.data_models.stg_order_items"
+[0m20:03:11.671221 [debug] [Thread-3 (]: Using postgres connection "model.data_models.stg_products"
+[0m20:03:11.671660 [debug] [Thread-1 (]: On model.data_models.stg_order_items: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_order_items"} */
+alter table "primary_app_db"."public_staging"."stg_order_items__dbt_tmp" rename to "stg_order_items"
+[0m20:03:11.671931 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m20:03:11.672206 [debug] [Thread-3 (]: On model.data_models.stg_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_products"} */
+alter table "primary_app_db"."public_staging"."stg_products__dbt_tmp" rename to "stg_products"
+[0m20:03:11.679434 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.007 seconds
+[0m20:03:11.685049 [debug] [Thread-2 (]: On model.data_models.stg_orders: COMMIT
+[0m20:03:11.686367 [debug] [Thread-1 (]: On model.data_models.stg_order_items: COMMIT
+[0m20:03:11.686649 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m20:03:11.686953 [debug] [Thread-2 (]: Using postgres connection "model.data_models.stg_orders"
+[0m20:03:11.687333 [debug] [Thread-1 (]: Using postgres connection "model.data_models.stg_order_items"
+[0m20:03:11.689187 [debug] [Thread-3 (]: On model.data_models.stg_products: COMMIT
+[0m20:03:11.689561 [debug] [Thread-2 (]: On model.data_models.stg_orders: COMMIT
+[0m20:03:11.689941 [debug] [Thread-1 (]: On model.data_models.stg_order_items: COMMIT
+[0m20:03:11.690302 [debug] [Thread-3 (]: Using postgres connection "model.data_models.stg_products"
+[0m20:03:11.690885 [debug] [Thread-3 (]: On model.data_models.stg_products: COMMIT
+[0m20:03:11.691182 [debug] [Thread-2 (]: SQL status: COMMIT in 0.001 seconds
+[0m20:03:11.691464 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m20:03:11.696473 [debug] [Thread-2 (]: Applying DROP to: "primary_app_db"."public_staging"."stg_orders__dbt_backup"
+[0m20:03:11.696744 [debug] [Thread-3 (]: SQL status: COMMIT in 0.005 seconds
+[0m20:03:11.698209 [debug] [Thread-1 (]: Applying DROP to: "primary_app_db"."public_staging"."stg_order_items__dbt_backup"
+[0m20:03:11.702130 [debug] [Thread-2 (]: Using postgres connection "model.data_models.stg_orders"
+[0m20:03:11.704605 [debug] [Thread-2 (]: On model.data_models.stg_orders: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_orders"} */
+drop view if exists "primary_app_db"."public_staging"."stg_orders__dbt_backup" cascade
+[0m20:03:11.704252 [debug] [Thread-1 (]: Using postgres connection "model.data_models.stg_order_items"
+[0m20:03:11.703661 [debug] [Thread-3 (]: Applying DROP to: "primary_app_db"."public_staging"."stg_products__dbt_backup"
+[0m20:03:11.705044 [debug] [Thread-1 (]: On model.data_models.stg_order_items: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_order_items"} */
+drop view if exists "primary_app_db"."public_staging"."stg_order_items__dbt_backup" cascade
+[0m20:03:11.705576 [debug] [Thread-3 (]: Using postgres connection "model.data_models.stg_products"
+[0m20:03:11.705845 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m20:03:11.706260 [debug] [Thread-3 (]: On model.data_models.stg_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_products"} */
+drop view if exists "primary_app_db"."public_staging"."stg_products__dbt_backup" cascade
+[0m20:03:11.708257 [debug] [Thread-2 (]: On model.data_models.stg_orders: Close
+[0m20:03:11.708526 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m20:03:11.709961 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m20:03:11.711079 [debug] [Thread-1 (]: On model.data_models.stg_order_items: Close
+[0m20:03:11.711546 [info ] [Thread-2 (]: 2 of 5 OK created sql view model public_staging.stg_orders ..................... [[32mCREATE VIEW[0m in 0.12s]
+[0m20:03:11.712586 [debug] [Thread-3 (]: On model.data_models.stg_products: Close
+[0m20:03:11.713159 [info ] [Thread-1 (]: 1 of 5 OK created sql view model public_staging.stg_order_items ................ [[32mCREATE VIEW[0m in 0.12s]
+[0m20:03:11.713830 [debug] [Thread-2 (]: Finished running node model.data_models.stg_orders
+[0m20:03:11.714389 [info ] [Thread-3 (]: 3 of 5 OK created sql view model public_staging.stg_products ................... [[32mCREATE VIEW[0m in 0.12s]
+[0m20:03:11.714877 [debug] [Thread-1 (]: Finished running node model.data_models.stg_order_items
+[0m20:03:11.715456 [debug] [Thread-3 (]: Finished running node model.data_models.stg_products
+[0m20:03:11.716833 [debug] [Thread-4 (]: Began running node model.data_models.dim_products
+[0m20:03:11.717226 [info ] [Thread-4 (]: 4 of 5 START sql table model public_analytics.dim_products ..................... [RUN]
+[0m20:03:11.717658 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.data_models.dim_products'
+[0m20:03:11.717982 [debug] [Thread-4 (]: Began compiling node model.data_models.dim_products
+[0m20:03:11.720517 [debug] [Thread-4 (]: Writing injected SQL for node "model.data_models.dim_products"
+[0m20:03:11.721401 [debug] [Thread-4 (]: Began executing node model.data_models.dim_products
+[0m20:03:11.737579 [debug] [Thread-4 (]: Writing runtime sql for node "model.data_models.dim_products"
+[0m20:03:11.738682 [debug] [Thread-4 (]: Using postgres connection "model.data_models.dim_products"
+[0m20:03:11.738992 [debug] [Thread-4 (]: On model.data_models.dim_products: BEGIN
+[0m20:03:11.739274 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m20:03:11.745079 [debug] [Thread-4 (]: SQL status: BEGIN in 0.006 seconds
+[0m20:03:11.745386 [debug] [Thread-4 (]: Using postgres connection "model.data_models.dim_products"
+[0m20:03:11.745697 [debug] [Thread-4 (]: On model.data_models.dim_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.dim_products"} */
+
+  
+    
+
+  create  table "primary_app_db"."public_analytics"."dim_products__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- data_models/models/marts/dim_products.sql
+
+-- Materialize as a table for fast read performance in Power BI
+
+
+SELECT
+    -- Final Unique Identifier for Power BI (Dimension Key)
+    product_pk, 
+    
+    -- Core Product Attributes
+    product_sku,
+    product_name,
+    
+    -- Descriptive Attributes
+    CASE
+        WHEN category_id = 1 THEN 'Electronics'
+        WHEN category_id = 2 THEN 'Apparel'
+        ELSE 'Other' 
+    END AS product_category_name, -- Logic to translate raw FK to a user-friendly name
+    
+    -- Price and Status
+    unit_price AS current_unit_price,
+    current_stock,
+    is_active,
+    
+    -- Metadata/History
+    created_timestamp
+    
+FROM
+    "primary_app_db"."public_staging"."stg_products"
+
+-- Optional: Add a unique constraint check to ensure dimension integrity
+-- You would typically add this to a 'schema.yml' file for testing
+  );
+  
+[0m20:03:11.748622 [debug] [Thread-4 (]: SQL status: SELECT 0 in 0.003 seconds
+[0m20:03:11.751096 [debug] [Thread-4 (]: Using postgres connection "model.data_models.dim_products"
+[0m20:03:11.751394 [debug] [Thread-4 (]: On model.data_models.dim_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.dim_products"} */
+alter table "primary_app_db"."public_analytics"."dim_products" rename to "dim_products__dbt_backup"
+[0m20:03:11.751871 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m20:03:11.753820 [debug] [Thread-4 (]: Using postgres connection "model.data_models.dim_products"
+[0m20:03:11.754105 [debug] [Thread-4 (]: On model.data_models.dim_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.dim_products"} */
+alter table "primary_app_db"."public_analytics"."dim_products__dbt_tmp" rename to "dim_products"
+[0m20:03:11.754536 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m20:03:11.758373 [debug] [Thread-4 (]: On model.data_models.dim_products: COMMIT
+[0m20:03:11.758661 [debug] [Thread-4 (]: Using postgres connection "model.data_models.dim_products"
+[0m20:03:11.758910 [debug] [Thread-4 (]: On model.data_models.dim_products: COMMIT
+[0m20:03:11.759564 [debug] [Thread-4 (]: SQL status: COMMIT in 0.000 seconds
+[0m20:03:11.761035 [debug] [Thread-4 (]: Applying DROP to: "primary_app_db"."public_analytics"."dim_products__dbt_backup"
+[0m20:03:11.763135 [debug] [Thread-4 (]: Using postgres connection "model.data_models.dim_products"
+[0m20:03:11.763515 [debug] [Thread-4 (]: On model.data_models.dim_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.dim_products"} */
+drop table if exists "primary_app_db"."public_analytics"."dim_products__dbt_backup" cascade
+[0m20:03:11.766172 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m20:03:11.767169 [debug] [Thread-4 (]: On model.data_models.dim_products: Close
+[0m20:03:11.767778 [info ] [Thread-4 (]: 4 of 5 OK created sql table model public_analytics.dim_products ................ [[32mSELECT 0[0m in 0.05s]
+[0m20:03:11.768254 [debug] [Thread-4 (]: Finished running node model.data_models.dim_products
+[0m20:03:11.768924 [debug] [Thread-1 (]: Began running node model.data_models.fact_sales
+[0m20:03:11.769321 [info ] [Thread-1 (]: 5 of 5 START sql table model public_analytics.fact_sales ....................... [RUN]
+[0m20:03:11.769670 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.data_models.stg_order_items, now model.data_models.fact_sales)
+[0m20:03:11.769955 [debug] [Thread-1 (]: Began compiling node model.data_models.fact_sales
+[0m20:03:11.772673 [debug] [Thread-1 (]: Writing injected SQL for node "model.data_models.fact_sales"
+[0m20:03:11.773361 [debug] [Thread-1 (]: Began executing node model.data_models.fact_sales
+[0m20:03:11.775446 [debug] [Thread-1 (]: Writing runtime sql for node "model.data_models.fact_sales"
+[0m20:03:11.776046 [debug] [Thread-1 (]: Using postgres connection "model.data_models.fact_sales"
+[0m20:03:11.776335 [debug] [Thread-1 (]: On model.data_models.fact_sales: BEGIN
+[0m20:03:11.776597 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:03:11.781679 [debug] [Thread-1 (]: SQL status: BEGIN in 0.005 seconds
+[0m20:03:11.781968 [debug] [Thread-1 (]: Using postgres connection "model.data_models.fact_sales"
+[0m20:03:11.782347 [debug] [Thread-1 (]: On model.data_models.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.fact_sales"} */
+
+  
+    
+
+  create  table "primary_app_db"."public_analytics"."fact_sales__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- data_models/models/marts/fact_sales.sql
+
+-- Materialize as a table for the best query performance in Power BI
+
+
+WITH items AS (
+    SELECT * FROM "primary_app_db"."public_staging"."stg_order_items" 
+),
+
+orders AS (
+    SELECT * FROM "primary_app_db"."public_staging"."stg_orders"
+),
+
+products AS (
+    -- Reference the clean dimension table to pull in descriptive data
+    SELECT 
+        product_pk, 
+        product_sku,
+        product_category_name -- Pulling the clean, categorized name from dim_products
+    FROM 
+        "primary_app_db"."public_analytics"."dim_products"
+)
+
+SELECT
+    -- 1. Foreign Keys (To link to the Dimension Tables)
+    o.order_pk AS order_key,
+    o.customer_id AS customer_key, -- Assumes a dim_customers table for lookup
+    i.product_pk AS product_key,
+
+    -- 2. Date/Time Dimensions (For temporal slicing and dicing)
+    o.order_timestamp AS sales_timestamp,
+    CAST(o.order_timestamp AS DATE) AS sales_date, -- For easy date filtering
+
+    -- 3. Measures (The core business metrics to be aggregated)
+    i.quantity AS units_sold,
+    i.unit_price_at_sale,
+    (i.quantity * i.unit_price_at_sale) AS gross_revenue_amount,
+    
+    -- 4. Descriptive Attributes (Denormalized into the fact for reporting convenience)
+    p.product_sku,
+    p.product_category_name,
+
+    -- 5. Status and Lineage
+    o.order_status,
+    o.source_system AS source_system
+    
+FROM
+    items i
+INNER JOIN
+    orders o 
+    ON i.order_pk = o.order_pk
+LEFT JOIN
+    products p
+    ON i.product_pk = p.product_pk
+
+WHERE
+    -- CRITICAL BUSINESS LOGIC: Ensure data integrity by only including transactions that are completed
+    o.order_status = 'Delivered' 
+    -- Filter out any future-dated orders or garbage data
+    AND o.order_timestamp <= NOW()
+  );
+  
+[0m20:03:11.786974 [debug] [Thread-1 (]: SQL status: SELECT 0 in 0.004 seconds
+[0m20:03:11.790528 [debug] [Thread-1 (]: Using postgres connection "model.data_models.fact_sales"
+[0m20:03:11.790865 [debug] [Thread-1 (]: On model.data_models.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.fact_sales"} */
+alter table "primary_app_db"."public_analytics"."fact_sales" rename to "fact_sales__dbt_backup"
+[0m20:03:11.791452 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m20:03:11.793373 [debug] [Thread-1 (]: Using postgres connection "model.data_models.fact_sales"
+[0m20:03:11.793686 [debug] [Thread-1 (]: On model.data_models.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.fact_sales"} */
+alter table "primary_app_db"."public_analytics"."fact_sales__dbt_tmp" rename to "fact_sales"
+[0m20:03:11.794148 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m20:03:11.795322 [debug] [Thread-1 (]: On model.data_models.fact_sales: COMMIT
+[0m20:03:11.795615 [debug] [Thread-1 (]: Using postgres connection "model.data_models.fact_sales"
+[0m20:03:11.795880 [debug] [Thread-1 (]: On model.data_models.fact_sales: COMMIT
+[0m20:03:11.796488 [debug] [Thread-1 (]: SQL status: COMMIT in 0.000 seconds
+[0m20:03:11.798282 [debug] [Thread-1 (]: Applying DROP to: "primary_app_db"."public_analytics"."fact_sales__dbt_backup"
+[0m20:03:11.798823 [debug] [Thread-1 (]: Using postgres connection "model.data_models.fact_sales"
+[0m20:03:11.799156 [debug] [Thread-1 (]: On model.data_models.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.fact_sales"} */
+drop table if exists "primary_app_db"."public_analytics"."fact_sales__dbt_backup" cascade
+[0m20:03:11.800492 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m20:03:11.801468 [debug] [Thread-1 (]: On model.data_models.fact_sales: Close
+[0m20:03:11.802052 [info ] [Thread-1 (]: 5 of 5 OK created sql table model public_analytics.fact_sales .................. [[32mSELECT 0[0m in 0.03s]
+[0m20:03:11.802582 [debug] [Thread-1 (]: Finished running node model.data_models.fact_sales
+[0m20:03:11.803685 [debug] [MainThread]: Using postgres connection "master"
+[0m20:03:11.804003 [debug] [MainThread]: On master: BEGIN
+[0m20:03:11.804299 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:03:11.809543 [debug] [MainThread]: SQL status: BEGIN in 0.005 seconds
+[0m20:03:11.809890 [debug] [MainThread]: On master: COMMIT
+[0m20:03:11.810148 [debug] [MainThread]: Using postgres connection "master"
+[0m20:03:11.810404 [debug] [MainThread]: On master: COMMIT
+[0m20:03:11.810696 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m20:03:11.810929 [debug] [MainThread]: On master: Close
+[0m20:03:11.811275 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:03:11.811560 [debug] [MainThread]: Connection 'model.data_models.fact_sales' was properly closed.
+[0m20:03:11.811812 [debug] [MainThread]: Connection 'model.data_models.stg_orders' was properly closed.
+[0m20:03:11.812045 [debug] [MainThread]: Connection 'model.data_models.stg_products' was properly closed.
+[0m20:03:11.812279 [debug] [MainThread]: Connection 'model.data_models.dim_products' was properly closed.
+[0m20:03:11.812879 [info ] [MainThread]: 
+[0m20:03:11.813230 [info ] [MainThread]: Finished running 2 table models, 3 view models in 0 hours 0 minutes and 0.37 seconds (0.37s).
+[0m20:03:11.814466 [debug] [MainThread]: Command end result
+[0m20:03:11.834367 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/dbt_project/target/manifest.json
+[0m20:03:11.835980 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/dbt_project/target/semantic_manifest.json
+[0m20:03:11.841626 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/dbt_project/target/run_results.json
+[0m20:03:11.841922 [info ] [MainThread]: 
+[0m20:03:11.842314 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:03:11.842616 [info ] [MainThread]: 
+[0m20:03:11.842997 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[0m20:03:11.844377 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.97261226, "process_in_blocks": "0", "process_kernel_time": 0.112748, "process_mem_max_rss": "127032", "process_out_blocks": "1798", "process_user_time": 1.909674}
+[0m20:03:11.844933 [debug] [MainThread]: Command `dbt run` succeeded at 20:03:11.844832 after 0.97 seconds
+[0m20:03:11.845266 [debug] [MainThread]: Flushing usage events
+
+
+============================== 21:31:34.053862 | 8c7bc2a5-5d47-4039-9120-904301633bf9 ==============================
+[0m21:31:34.053862 [info ] [MainThread]: Running with dbt=1.9.0
+[0m21:31:34.065321 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/usr/app/dbt_project', 'log_path': '/usr/app/dbt_project/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug --target prod', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m21:31:34.065967 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m21:31:34.091402 [info ] [MainThread]: dbt version: 1.9.0
+[0m21:31:34.091981 [info ] [MainThread]: python version: 3.12.4
+[0m21:31:34.092447 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m21:31:34.092807 [info ] [MainThread]: os info: Linux-6.12.5-linuxkit-x86_64-with-glibc2.31
+[0m21:31:34.143484 [info ] [MainThread]: Using profiles dir at /usr/app/dbt_project
+[0m21:31:34.143981 [info ] [MainThread]: Using profiles.yml file at /usr/app/dbt_project/profiles.yml
+[0m21:31:34.144354 [info ] [MainThread]: Using dbt_project.yml file at /usr/app/dbt_project/dbt_project.yml
+[0m21:31:34.144841 [info ] [MainThread]: adapter type: postgres
+[0m21:31:34.145214 [info ] [MainThread]: adapter version: 1.9.0
+[0m21:31:34.224105 [info ] [MainThread]: Configuration:
+[0m21:31:34.224624 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:31:34.225018 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:31:34.225358 [info ] [MainThread]: Required dependencies:
+[0m21:31:34.225881 [debug] [MainThread]: Executing "git --help"
+[0m21:31:34.244921 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:31:34.245545 [debug] [MainThread]: STDERR: "b''"
+[0m21:31:34.245861 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:31:34.246200 [info ] [MainThread]: Connection:
+[0m21:31:34.246628 [info ] [MainThread]:   host: db
+[0m21:31:34.246978 [info ] [MainThread]:   port: 5432
+[0m21:31:34.247345 [info ] [MainThread]:   user: prod_app_user_2025
+[0m21:31:34.247731 [info ] [MainThread]:   database: primary_app_db
+[0m21:31:34.248063 [info ] [MainThread]:   schema: public
+[0m21:31:34.248463 [info ] [MainThread]:   connect_timeout: 10
+[0m21:31:34.248830 [info ] [MainThread]:   role: None
+[0m21:31:34.249137 [info ] [MainThread]:   search_path: None
+[0m21:31:34.249499 [info ] [MainThread]:   keepalives_idle: 0
+[0m21:31:34.249858 [info ] [MainThread]:   sslmode: None
+[0m21:31:34.250183 [info ] [MainThread]:   sslcert: None
+[0m21:31:34.250499 [info ] [MainThread]:   sslkey: None
+[0m21:31:34.250884 [info ] [MainThread]:   sslrootcert: None
+[0m21:31:34.251210 [info ] [MainThread]:   application_name: dbt
+[0m21:31:34.251618 [info ] [MainThread]:   retries: 1
+[0m21:31:34.252142 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m21:31:34.301737 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m21:31:34.328210 [debug] [MainThread]: Using postgres connection "debug"
+[0m21:31:34.330459 [debug] [MainThread]: On debug: select 1 as id
+[0m21:31:34.332507 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:31:34.373781 [debug] [MainThread]: SQL status: SELECT 1 in 0.041 seconds
+[0m21:31:34.375078 [debug] [MainThread]: On debug: Close
+[0m21:31:34.375550 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m21:31:34.375992 [info ] [MainThread]: [32mAll checks passed![0m
+[0m21:31:34.379464 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.37419096, "process_in_blocks": "0", "process_kernel_time": 0.11579, "process_mem_max_rss": "119708", "process_out_blocks": "1500", "process_user_time": 1.285675}
+[0m21:31:34.380041 [debug] [MainThread]: Command `dbt debug` succeeded at 21:31:34.379931 after 0.38 seconds
+[0m21:31:34.380405 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:31:34.380791 [debug] [MainThread]: Flushing usage events
+
+
+============================== 21:31:35.521139 | e65b370c-a8e0-4225-bf44-198a90e71f10 ==============================
+[0m21:31:35.521139 [info ] [MainThread]: Running with dbt=1.9.0
+[0m21:31:35.528390 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/usr/app/dbt_project/logs', 'profiles_dir': '/usr/app/dbt_project', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run --target prod', 'send_anonymous_usage_stats': 'False'}
+[0m21:31:35.529046 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m21:31:35.708365 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m21:31:35.763404 [debug] [MainThread]: checksum: 5e136c6ef973c3d2d7bca0f5b88d13d58073133b7e7d38a3e8d0aac8e6391733, vars: {}, profile: , target: prod, version: 1.9.0
+[0m21:31:35.856181 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:31:35.856586 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:31:35.948988 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/dbt_project/target/manifest.json
+[0m21:31:35.951698 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/dbt_project/target/semantic_manifest.json
+[0m21:31:35.976393 [info ] [MainThread]: Found 5 models, 3 sources, 429 macros
+[0m21:31:35.978395 [info ] [MainThread]: 
+[0m21:31:35.978877 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+[0m21:31:35.979310 [info ] [MainThread]: 
+[0m21:31:35.979972 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:31:35.984712 [debug] [ThreadPool]: Acquiring new postgres connection 'list_primary_app_db'
+[0m21:31:35.985449 [debug] [ThreadPool]: Acquiring new postgres connection 'list_primary_app_db'
+[0m21:31:36.013781 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db"
+[0m21:31:36.014563 [debug] [ThreadPool]: On list_primary_app_db: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "list_primary_app_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m21:31:36.014202 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db"
+[0m21:31:36.015184 [debug] [ThreadPool]: On list_primary_app_db: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "list_primary_app_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m21:31:36.014884 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:31:36.015472 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:31:36.069839 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.054 seconds
+[0m21:31:36.070173 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.055 seconds
+[0m21:31:36.071752 [debug] [ThreadPool]: On list_primary_app_db: Close
+[0m21:31:36.072835 [debug] [ThreadPool]: On list_primary_app_db: Close
+[0m21:31:36.073918 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_primary_app_db, now create_primary_app_db_public_staging)
+[0m21:31:36.074215 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_primary_app_db, now create_primary_app_db_public_analytics)
+[0m21:31:36.074862 [debug] [ThreadPool]: Creating schema "database: "primary_app_db"
+schema: "public_staging"
+"
+[0m21:31:36.075271 [debug] [ThreadPool]: Creating schema "database: "primary_app_db"
+schema: "public_analytics"
+"
+[0m21:31:36.079222 [debug] [ThreadPool]: Using postgres connection "create_primary_app_db_public_staging"
+[0m21:31:36.080751 [debug] [ThreadPool]: On create_primary_app_db_public_staging: BEGIN
+[0m21:31:36.080482 [debug] [ThreadPool]: Using postgres connection "create_primary_app_db_public_analytics"
+[0m21:31:36.081018 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:31:36.081274 [debug] [ThreadPool]: On create_primary_app_db_public_analytics: BEGIN
+[0m21:31:36.081776 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:31:36.088902 [debug] [ThreadPool]: SQL status: BEGIN in 0.008 seconds
+[0m21:31:36.089250 [debug] [ThreadPool]: Using postgres connection "create_primary_app_db_public_staging"
+[0m21:31:36.089732 [debug] [ThreadPool]: On create_primary_app_db_public_staging: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "create_primary_app_db_public_staging"} */
+create schema if not exists "public_staging"
+[0m21:31:36.089548 [debug] [ThreadPool]: SQL status: BEGIN in 0.008 seconds
+[0m21:31:36.090090 [debug] [ThreadPool]: Using postgres connection "create_primary_app_db_public_analytics"
+[0m21:31:36.090535 [debug] [ThreadPool]: On create_primary_app_db_public_analytics: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "create_primary_app_db_public_analytics"} */
+create schema if not exists "public_analytics"
+[0m21:31:36.090292 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.000 seconds
+[0m21:31:36.091436 [debug] [ThreadPool]: On create_primary_app_db_public_staging: COMMIT
+[0m21:31:36.091633 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.001 seconds
+[0m21:31:36.091889 [debug] [ThreadPool]: Using postgres connection "create_primary_app_db_public_staging"
+[0m21:31:36.092975 [debug] [ThreadPool]: On create_primary_app_db_public_staging: COMMIT
+[0m21:31:36.092651 [debug] [ThreadPool]: On create_primary_app_db_public_analytics: COMMIT
+[0m21:31:36.093407 [debug] [ThreadPool]: Using postgres connection "create_primary_app_db_public_analytics"
+[0m21:31:36.093847 [debug] [ThreadPool]: On create_primary_app_db_public_analytics: COMMIT
+[0m21:31:36.093626 [debug] [ThreadPool]: SQL status: COMMIT in 0.000 seconds
+[0m21:31:36.094246 [debug] [ThreadPool]: On create_primary_app_db_public_staging: Close
+[0m21:31:36.094460 [debug] [ThreadPool]: SQL status: COMMIT in 0.000 seconds
+[0m21:31:36.094950 [debug] [ThreadPool]: On create_primary_app_db_public_analytics: Close
+[0m21:31:36.097022 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_primary_app_db_public_analytics, now list_primary_app_db_public_staging)
+[0m21:31:36.097398 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_primary_app_db_public_staging, now list_primary_app_db_public_analytics)
+[0m21:31:36.101604 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db_public_staging"
+[0m21:31:36.102851 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db_public_analytics"
+[0m21:31:36.103167 [debug] [ThreadPool]: On list_primary_app_db_public_staging: BEGIN
+[0m21:31:36.103468 [debug] [ThreadPool]: On list_primary_app_db_public_analytics: BEGIN
+[0m21:31:36.103766 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:31:36.104064 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:31:36.109081 [debug] [ThreadPool]: SQL status: BEGIN in 0.005 seconds
+[0m21:31:36.109310 [debug] [ThreadPool]: SQL status: BEGIN in 0.005 seconds
+[0m21:31:36.109568 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db_public_staging"
+[0m21:31:36.109868 [debug] [ThreadPool]: Using postgres connection "list_primary_app_db_public_analytics"
+[0m21:31:36.110209 [debug] [ThreadPool]: On list_primary_app_db_public_staging: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "list_primary_app_db_public_staging"} */
+select
+      'primary_app_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'primary_app_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_staging'
+    union all
+    select
+      'primary_app_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_staging'
+  
+[0m21:31:36.110572 [debug] [ThreadPool]: On list_primary_app_db_public_analytics: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "list_primary_app_db_public_analytics"} */
+select
+      'primary_app_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_analytics'
+    union all
+    select
+      'primary_app_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_analytics'
+    union all
+    select
+      'primary_app_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_analytics'
+  
+[0m21:31:36.112693 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.002 seconds
+[0m21:31:36.112893 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.002 seconds
+[0m21:31:36.113905 [debug] [ThreadPool]: On list_primary_app_db_public_staging: ROLLBACK
+[0m21:31:36.114891 [debug] [ThreadPool]: On list_primary_app_db_public_analytics: ROLLBACK
+[0m21:31:36.115350 [debug] [ThreadPool]: On list_primary_app_db_public_staging: Close
+[0m21:31:36.115638 [debug] [ThreadPool]: On list_primary_app_db_public_analytics: Close
+[0m21:31:36.119638 [debug] [MainThread]: Using postgres connection "master"
+[0m21:31:36.119977 [debug] [MainThread]: On master: BEGIN
+[0m21:31:36.120249 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:31:36.125315 [debug] [MainThread]: SQL status: BEGIN in 0.005 seconds
+[0m21:31:36.125671 [debug] [MainThread]: Using postgres connection "master"
+[0m21:31:36.126097 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m21:31:36.128622 [debug] [MainThread]: SQL status: SELECT 0 in 0.002 seconds
+[0m21:31:36.129867 [debug] [MainThread]: On master: ROLLBACK
+[0m21:31:36.130253 [debug] [MainThread]: Using postgres connection "master"
+[0m21:31:36.130561 [debug] [MainThread]: On master: BEGIN
+[0m21:31:36.130971 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m21:31:36.131279 [debug] [MainThread]: On master: COMMIT
+[0m21:31:36.131590 [debug] [MainThread]: Using postgres connection "master"
+[0m21:31:36.131892 [debug] [MainThread]: On master: COMMIT
+[0m21:31:36.132265 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m21:31:36.132576 [debug] [MainThread]: On master: Close
+[0m21:31:36.134584 [debug] [Thread-1 (]: Began running node model.data_models.stg_order_items
+[0m21:31:36.134883 [debug] [Thread-2 (]: Began running node model.data_models.stg_orders
+[0m21:31:36.135163 [debug] [Thread-3 (]: Began running node model.data_models.stg_products
+[0m21:31:36.135670 [info ] [Thread-1 (]: 1 of 5 START sql view model public_staging.stg_order_items ..................... [RUN]
+[0m21:31:36.136195 [info ] [Thread-2 (]: 2 of 5 START sql view model public_staging.stg_orders .......................... [RUN]
+[0m21:31:36.136816 [info ] [Thread-3 (]: 3 of 5 START sql view model public_staging.stg_products ........................ [RUN]
+[0m21:31:36.137308 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_primary_app_db_public_analytics, now model.data_models.stg_order_items)
+[0m21:31:36.137686 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_primary_app_db_public_staging, now model.data_models.stg_orders)
+[0m21:31:36.138210 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.data_models.stg_products'
+[0m21:31:36.138591 [debug] [Thread-1 (]: Began compiling node model.data_models.stg_order_items
+[0m21:31:36.138931 [debug] [Thread-2 (]: Began compiling node model.data_models.stg_orders
+[0m21:31:36.139272 [debug] [Thread-3 (]: Began compiling node model.data_models.stg_products
+[0m21:31:36.144923 [debug] [Thread-1 (]: Writing injected SQL for node "model.data_models.stg_order_items"
+[0m21:31:36.147829 [debug] [Thread-2 (]: Writing injected SQL for node "model.data_models.stg_orders"
+[0m21:31:36.149955 [debug] [Thread-3 (]: Writing injected SQL for node "model.data_models.stg_products"
+[0m21:31:36.151892 [debug] [Thread-2 (]: Began executing node model.data_models.stg_orders
+[0m21:31:36.158290 [debug] [Thread-3 (]: Began executing node model.data_models.stg_products
+[0m21:31:36.158556 [debug] [Thread-1 (]: Began executing node model.data_models.stg_order_items
+[0m21:31:36.178992 [debug] [Thread-2 (]: Writing runtime sql for node "model.data_models.stg_orders"
+[0m21:31:36.181144 [debug] [Thread-3 (]: Writing runtime sql for node "model.data_models.stg_products"
+[0m21:31:36.183188 [debug] [Thread-1 (]: Writing runtime sql for node "model.data_models.stg_order_items"
+[0m21:31:36.185031 [debug] [Thread-2 (]: Using postgres connection "model.data_models.stg_orders"
+[0m21:31:36.185363 [debug] [Thread-1 (]: Using postgres connection "model.data_models.stg_order_items"
+[0m21:31:36.185609 [debug] [Thread-3 (]: Using postgres connection "model.data_models.stg_products"
+[0m21:31:36.185869 [debug] [Thread-2 (]: On model.data_models.stg_orders: BEGIN
+[0m21:31:36.186734 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m21:31:36.186462 [debug] [Thread-3 (]: On model.data_models.stg_products: BEGIN
+[0m21:31:36.186170 [debug] [Thread-1 (]: On model.data_models.stg_order_items: BEGIN
+[0m21:31:36.187189 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m21:31:36.187748 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:31:36.192138 [debug] [Thread-2 (]: SQL status: BEGIN in 0.005 seconds
+[0m21:31:36.192551 [debug] [Thread-2 (]: Using postgres connection "model.data_models.stg_orders"
+[0m21:31:36.192811 [debug] [Thread-3 (]: SQL status: BEGIN in 0.006 seconds
+[0m21:31:36.193122 [debug] [Thread-2 (]: On model.data_models.stg_orders: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_orders"} */
+
+  create view "primary_app_db"."public_staging"."stg_orders__dbt_tmp"
+    
+    
+  as (
+    -- data_models/models/staging/stg_orders.sql
+
+
+
+SELECT
+    -- 1. Identifier Renaming
+    id AS order_pk,
+    customer_id,
+    
+    -- 2. Cleaning and Standardization
+    TRIM(order_status) AS order_status, -- Remove accidental whitespace
+    
+    -- 3. Timestamp Standardization
+    order_timestamp,
+    
+    -- 4. Type Casting
+    CAST(total_paid AS NUMERIC(10, 2)) AS total_paid_amount,
+    
+    -- 5. Source Metadata
+    'postgres_raw' AS source_system
+    
+FROM
+    "primary_app_db"."public"."raw_orders"
+  );
+[0m21:31:36.193476 [debug] [Thread-3 (]: Using postgres connection "model.data_models.stg_products"
+[0m21:31:36.193984 [debug] [Thread-3 (]: On model.data_models.stg_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_products"} */
+
+  create view "primary_app_db"."public_staging"."stg_products__dbt_tmp"
+    
+    
+  as (
+    -- data_models/models/staging/stg_products.sql
+
+-- Set the materialization as view for quick development/light queries
+
+
+SELECT
+    -- 1. Primary Key/Identifier Renaming
+    id AS product_pk, -- 'pk' for primary key in the source system (raw table)
+    
+    -- 2. Cleaning and Standardizing Identifiers
+    UPPER(product_sku) AS product_sku, -- Ensure SKUs are consistently uppercase
+    
+    -- 3. Core Attributes (Simple pass-through)
+    product_name,
+    category_id,
+    
+    -- 4. Type Casting/Formatting
+    CAST(unit_price AS NUMERIC(10, 2)) AS unit_price,
+    current_stock,
+    is_active,
+    
+    -- 5. Timestamp Standardization
+    created_timestamp,
+    
+    -- 6. Source Metadata (Useful for data lineage/debugging)
+    'postgres_raw' AS source_system
+    
+FROM
+    -- Reference the RAW table in the PostgreSQL database
+    "primary_app_db"."public"."raw_products"
+  );
+[0m21:31:36.194514 [debug] [Thread-1 (]: SQL status: BEGIN in 0.007 seconds
+[0m21:31:36.195039 [debug] [Thread-1 (]: Using postgres connection "model.data_models.stg_order_items"
+[0m21:31:36.194787 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.001 seconds
+[0m21:31:36.195321 [debug] [Thread-1 (]: On model.data_models.stg_order_items: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_order_items"} */
+
+  create view "primary_app_db"."public_staging"."stg_order_items__dbt_tmp"
+    
+    
+  as (
+    -- data_models/models/staging/stg_order_items.sql
+
+
+
+SELECT
+    -- 1. Identifier Renaming
+    id AS order_item_pk,
+    order_id AS order_pk,
+    product_id AS product_pk,
+
+    -- 2. Type Casting and Validation
+    quantity,
+    CAST(unit_price_at_sale AS NUMERIC(10, 2)) AS unit_price_at_sale,
+    
+    -- 3. Source Metadata
+    'postgres_raw' AS source_system
+    
+FROM
+    "primary_app_db"."public"."raw_order_items"
+  );
+[0m21:31:36.195606 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.001 seconds
+[0m21:31:36.200920 [debug] [Thread-2 (]: Using postgres connection "model.data_models.stg_orders"
+[0m21:31:36.203170 [debug] [Thread-3 (]: Using postgres connection "model.data_models.stg_products"
+[0m21:31:36.203452 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m21:31:36.203748 [debug] [Thread-2 (]: On model.data_models.stg_orders: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_orders"} */
+alter table "primary_app_db"."public_staging"."stg_orders__dbt_tmp" rename to "stg_orders"
+[0m21:31:36.204110 [debug] [Thread-3 (]: On model.data_models.stg_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_products"} */
+alter table "primary_app_db"."public_staging"."stg_products__dbt_tmp" rename to "stg_products"
+[0m21:31:36.206137 [debug] [Thread-1 (]: Using postgres connection "model.data_models.stg_order_items"
+[0m21:31:36.207405 [debug] [Thread-1 (]: On model.data_models.stg_order_items: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_order_items"} */
+alter table "primary_app_db"."public_staging"."stg_order_items__dbt_tmp" rename to "stg_order_items"
+[0m21:31:36.207098 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m21:31:36.206739 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m21:31:36.214531 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.007 seconds
+[0m21:31:36.219969 [debug] [Thread-3 (]: On model.data_models.stg_products: COMMIT
+[0m21:31:36.221187 [debug] [Thread-2 (]: On model.data_models.stg_orders: COMMIT
+[0m21:31:36.222918 [debug] [Thread-2 (]: Using postgres connection "model.data_models.stg_orders"
+[0m21:31:36.222600 [debug] [Thread-3 (]: Using postgres connection "model.data_models.stg_products"
+[0m21:31:36.222196 [debug] [Thread-1 (]: On model.data_models.stg_order_items: COMMIT
+[0m21:31:36.223974 [debug] [Thread-1 (]: Using postgres connection "model.data_models.stg_order_items"
+[0m21:31:36.223670 [debug] [Thread-3 (]: On model.data_models.stg_products: COMMIT
+[0m21:31:36.223244 [debug] [Thread-2 (]: On model.data_models.stg_orders: COMMIT
+[0m21:31:36.224318 [debug] [Thread-1 (]: On model.data_models.stg_order_items: COMMIT
+[0m21:31:36.225624 [debug] [Thread-3 (]: SQL status: COMMIT in 0.001 seconds
+[0m21:31:36.226162 [debug] [Thread-2 (]: SQL status: COMMIT in 0.001 seconds
+[0m21:31:36.225944 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m21:31:36.231019 [debug] [Thread-3 (]: Applying DROP to: "primary_app_db"."public_staging"."stg_products__dbt_backup"
+[0m21:31:36.233206 [debug] [Thread-2 (]: Applying DROP to: "primary_app_db"."public_staging"."stg_orders__dbt_backup"
+[0m21:31:36.238892 [debug] [Thread-2 (]: Using postgres connection "model.data_models.stg_orders"
+[0m21:31:36.238365 [debug] [Thread-3 (]: Using postgres connection "model.data_models.stg_products"
+[0m21:31:36.234655 [debug] [Thread-1 (]: Applying DROP to: "primary_app_db"."public_staging"."stg_order_items__dbt_backup"
+[0m21:31:36.240111 [debug] [Thread-1 (]: Using postgres connection "model.data_models.stg_order_items"
+[0m21:31:36.239610 [debug] [Thread-3 (]: On model.data_models.stg_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_products"} */
+drop view if exists "primary_app_db"."public_staging"."stg_products__dbt_backup" cascade
+[0m21:31:36.239226 [debug] [Thread-2 (]: On model.data_models.stg_orders: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_orders"} */
+drop view if exists "primary_app_db"."public_staging"."stg_orders__dbt_backup" cascade
+[0m21:31:36.240446 [debug] [Thread-1 (]: On model.data_models.stg_order_items: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.stg_order_items"} */
+drop view if exists "primary_app_db"."public_staging"."stg_order_items__dbt_backup" cascade
+[0m21:31:36.241006 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m21:31:36.241292 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m21:31:36.241656 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m21:31:36.243490 [debug] [Thread-3 (]: On model.data_models.stg_products: Close
+[0m21:31:36.244601 [debug] [Thread-2 (]: On model.data_models.stg_orders: Close
+[0m21:31:36.245643 [debug] [Thread-1 (]: On model.data_models.stg_order_items: Close
+[0m21:31:36.247274 [info ] [Thread-3 (]: 3 of 5 OK created sql view model public_staging.stg_products ................... [[32mCREATE VIEW[0m in 0.11s]
+[0m21:31:36.248049 [info ] [Thread-2 (]: 2 of 5 OK created sql view model public_staging.stg_orders ..................... [[32mCREATE VIEW[0m in 0.11s]
+[0m21:31:36.250011 [debug] [Thread-2 (]: Finished running node model.data_models.stg_orders
+[0m21:31:36.249511 [debug] [Thread-3 (]: Finished running node model.data_models.stg_products
+[0m21:31:36.248673 [info ] [Thread-1 (]: 1 of 5 OK created sql view model public_staging.stg_order_items ................ [[32mCREATE VIEW[0m in 0.11s]
+[0m21:31:36.250755 [debug] [Thread-4 (]: Began running node model.data_models.dim_products
+[0m21:31:36.251202 [debug] [Thread-1 (]: Finished running node model.data_models.stg_order_items
+[0m21:31:36.251628 [info ] [Thread-4 (]: 4 of 5 START sql table model public_analytics.dim_products ..................... [RUN]
+[0m21:31:36.252313 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.data_models.dim_products'
+[0m21:31:36.252655 [debug] [Thread-4 (]: Began compiling node model.data_models.dim_products
+[0m21:31:36.254987 [debug] [Thread-4 (]: Writing injected SQL for node "model.data_models.dim_products"
+[0m21:31:36.257133 [debug] [Thread-4 (]: Began executing node model.data_models.dim_products
+[0m21:31:36.273713 [debug] [Thread-4 (]: Writing runtime sql for node "model.data_models.dim_products"
+[0m21:31:36.275034 [debug] [Thread-4 (]: Using postgres connection "model.data_models.dim_products"
+[0m21:31:36.275384 [debug] [Thread-4 (]: On model.data_models.dim_products: BEGIN
+[0m21:31:36.275655 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m21:31:36.280986 [debug] [Thread-4 (]: SQL status: BEGIN in 0.005 seconds
+[0m21:31:36.281350 [debug] [Thread-4 (]: Using postgres connection "model.data_models.dim_products"
+[0m21:31:36.281691 [debug] [Thread-4 (]: On model.data_models.dim_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.dim_products"} */
+
+  
+    
+
+  create  table "primary_app_db"."public_analytics"."dim_products__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- data_models/models/marts/dim_products.sql
+
+-- Materialize as a table for fast read performance in Power BI
+
+
+SELECT
+    -- Final Unique Identifier for Power BI (Dimension Key)
+    product_pk, 
+    
+    -- Core Product Attributes
+    product_sku,
+    product_name,
+    
+    -- Descriptive Attributes
+    CASE
+        WHEN category_id = 1 THEN 'Electronics'
+        WHEN category_id = 2 THEN 'Apparel'
+        ELSE 'Other' 
+    END AS product_category_name, -- Logic to translate raw FK to a user-friendly name
+    
+    -- Price and Status
+    unit_price AS current_unit_price,
+    current_stock,
+    is_active,
+    
+    -- Metadata/History
+    created_timestamp
+    
+FROM
+    "primary_app_db"."public_staging"."stg_products"
+
+-- Optional: Add a unique constraint check to ensure dimension integrity
+-- You would typically add this to a 'schema.yml' file for testing
+  );
+  
+[0m21:31:36.284232 [debug] [Thread-4 (]: SQL status: SELECT 0 in 0.002 seconds
+[0m21:31:36.286510 [debug] [Thread-4 (]: Using postgres connection "model.data_models.dim_products"
+[0m21:31:36.286803 [debug] [Thread-4 (]: On model.data_models.dim_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.dim_products"} */
+alter table "primary_app_db"."public_analytics"."dim_products__dbt_tmp" rename to "dim_products"
+[0m21:31:36.287229 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m21:31:36.291110 [debug] [Thread-4 (]: On model.data_models.dim_products: COMMIT
+[0m21:31:36.291415 [debug] [Thread-4 (]: Using postgres connection "model.data_models.dim_products"
+[0m21:31:36.291712 [debug] [Thread-4 (]: On model.data_models.dim_products: COMMIT
+[0m21:31:36.292346 [debug] [Thread-4 (]: SQL status: COMMIT in 0.000 seconds
+[0m21:31:36.293853 [debug] [Thread-4 (]: Applying DROP to: "primary_app_db"."public_analytics"."dim_products__dbt_backup"
+[0m21:31:36.295948 [debug] [Thread-4 (]: Using postgres connection "model.data_models.dim_products"
+[0m21:31:36.296274 [debug] [Thread-4 (]: On model.data_models.dim_products: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.dim_products"} */
+drop table if exists "primary_app_db"."public_analytics"."dim_products__dbt_backup" cascade
+[0m21:31:36.296666 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m21:31:36.297676 [debug] [Thread-4 (]: On model.data_models.dim_products: Close
+[0m21:31:36.298274 [info ] [Thread-4 (]: 4 of 5 OK created sql table model public_analytics.dim_products ................ [[32mSELECT 0[0m in 0.05s]
+[0m21:31:36.298979 [debug] [Thread-4 (]: Finished running node model.data_models.dim_products
+[0m21:31:36.300323 [debug] [Thread-3 (]: Began running node model.data_models.fact_sales
+[0m21:31:36.300747 [info ] [Thread-3 (]: 5 of 5 START sql table model public_analytics.fact_sales ....................... [RUN]
+[0m21:31:36.301196 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.data_models.stg_products, now model.data_models.fact_sales)
+[0m21:31:36.301574 [debug] [Thread-3 (]: Began compiling node model.data_models.fact_sales
+[0m21:31:36.304390 [debug] [Thread-3 (]: Writing injected SQL for node "model.data_models.fact_sales"
+[0m21:31:36.306046 [debug] [Thread-3 (]: Began executing node model.data_models.fact_sales
+[0m21:31:36.308243 [debug] [Thread-3 (]: Writing runtime sql for node "model.data_models.fact_sales"
+[0m21:31:36.308884 [debug] [Thread-3 (]: Using postgres connection "model.data_models.fact_sales"
+[0m21:31:36.309152 [debug] [Thread-3 (]: On model.data_models.fact_sales: BEGIN
+[0m21:31:36.309409 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m21:31:36.314328 [debug] [Thread-3 (]: SQL status: BEGIN in 0.005 seconds
+[0m21:31:36.314624 [debug] [Thread-3 (]: Using postgres connection "model.data_models.fact_sales"
+[0m21:31:36.315001 [debug] [Thread-3 (]: On model.data_models.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.fact_sales"} */
+
+  
+    
+
+  create  table "primary_app_db"."public_analytics"."fact_sales__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- data_models/models/marts/fact_sales.sql
+
+-- Materialize as a table for the best query performance in Power BI
+
+
+WITH items AS (
+    SELECT * FROM "primary_app_db"."public_staging"."stg_order_items" 
+),
+
+orders AS (
+    SELECT * FROM "primary_app_db"."public_staging"."stg_orders"
+),
+
+products AS (
+    -- Reference the clean dimension table to pull in descriptive data
+    SELECT 
+        product_pk, 
+        product_sku,
+        product_category_name -- Pulling the clean, categorized name from dim_products
+    FROM 
+        "primary_app_db"."public_analytics"."dim_products"
+)
+
+SELECT
+    -- 1. Foreign Keys (To link to the Dimension Tables)
+    o.order_pk AS order_key,
+    o.customer_id AS customer_key, -- Assumes a dim_customers table for lookup
+    i.product_pk AS product_key,
+
+    -- 2. Date/Time Dimensions (For temporal slicing and dicing)
+    o.order_timestamp AS sales_timestamp,
+    CAST(o.order_timestamp AS DATE) AS sales_date, -- For easy date filtering
+
+    -- 3. Measures (The core business metrics to be aggregated)
+    i.quantity AS units_sold,
+    i.unit_price_at_sale,
+    (i.quantity * i.unit_price_at_sale) AS gross_revenue_amount,
+    
+    -- 4. Descriptive Attributes (Denormalized into the fact for reporting convenience)
+    p.product_sku,
+    p.product_category_name,
+
+    -- 5. Status and Lineage
+    o.order_status,
+    o.source_system AS source_system
+    
+FROM
+    items i
+INNER JOIN
+    orders o 
+    ON i.order_pk = o.order_pk
+LEFT JOIN
+    products p
+    ON i.product_pk = p.product_pk
+
+WHERE
+    -- CRITICAL BUSINESS LOGIC: Ensure data integrity by only including transactions that are completed
+    o.order_status = 'Delivered' 
+    -- Filter out any future-dated orders or garbage data
+    AND o.order_timestamp <= NOW()
+  );
+  
+[0m21:31:36.330492 [debug] [Thread-3 (]: SQL status: SELECT 0 in 0.015 seconds
+[0m21:31:36.332746 [debug] [Thread-3 (]: Using postgres connection "model.data_models.fact_sales"
+[0m21:31:36.333047 [debug] [Thread-3 (]: On model.data_models.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.fact_sales"} */
+alter table "primary_app_db"."public_analytics"."fact_sales__dbt_tmp" rename to "fact_sales"
+[0m21:31:36.333465 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m21:31:36.334613 [debug] [Thread-3 (]: On model.data_models.fact_sales: COMMIT
+[0m21:31:36.334910 [debug] [Thread-3 (]: Using postgres connection "model.data_models.fact_sales"
+[0m21:31:36.335175 [debug] [Thread-3 (]: On model.data_models.fact_sales: COMMIT
+[0m21:31:36.336011 [debug] [Thread-3 (]: SQL status: COMMIT in 0.001 seconds
+[0m21:31:36.337493 [debug] [Thread-3 (]: Applying DROP to: "primary_app_db"."public_analytics"."fact_sales__dbt_backup"
+[0m21:31:36.338735 [debug] [Thread-3 (]: Using postgres connection "model.data_models.fact_sales"
+[0m21:31:36.339017 [debug] [Thread-3 (]: On model.data_models.fact_sales: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "data_models", "target_name": "prod", "node_id": "model.data_models.fact_sales"} */
+drop table if exists "primary_app_db"."public_analytics"."fact_sales__dbt_backup" cascade
+[0m21:31:36.339422 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m21:31:36.340427 [debug] [Thread-3 (]: On model.data_models.fact_sales: Close
+[0m21:31:36.341028 [info ] [Thread-3 (]: 5 of 5 OK created sql table model public_analytics.fact_sales .................. [[32mSELECT 0[0m in 0.04s]
+[0m21:31:36.341572 [debug] [Thread-3 (]: Finished running node model.data_models.fact_sales
+[0m21:31:36.342741 [debug] [MainThread]: Using postgres connection "master"
+[0m21:31:36.343071 [debug] [MainThread]: On master: BEGIN
+[0m21:31:36.343360 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:31:36.352143 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m21:31:36.352801 [debug] [MainThread]: On master: COMMIT
+[0m21:31:36.353494 [debug] [MainThread]: Using postgres connection "master"
+[0m21:31:36.353761 [debug] [MainThread]: On master: COMMIT
+[0m21:31:36.354071 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m21:31:36.354369 [debug] [MainThread]: On master: Close
+[0m21:31:36.354780 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:31:36.355026 [debug] [MainThread]: Connection 'model.data_models.stg_orders' was properly closed.
+[0m21:31:36.355323 [debug] [MainThread]: Connection 'model.data_models.stg_order_items' was properly closed.
+[0m21:31:36.355612 [debug] [MainThread]: Connection 'model.data_models.fact_sales' was properly closed.
+[0m21:31:36.355846 [debug] [MainThread]: Connection 'model.data_models.dim_products' was properly closed.
+[0m21:31:36.356379 [info ] [MainThread]: 
+[0m21:31:36.356706 [info ] [MainThread]: Finished running 2 table models, 3 view models in 0 hours 0 minutes and 0.38 seconds (0.38s).
+[0m21:31:36.357939 [debug] [MainThread]: Command end result
+[0m21:31:36.378186 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/dbt_project/target/manifest.json
+[0m21:31:36.379719 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/dbt_project/target/semantic_manifest.json
+[0m21:31:36.385542 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/dbt_project/target/run_results.json
+[0m21:31:36.385816 [info ] [MainThread]: 
+[0m21:31:36.386246 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:31:36.386645 [info ] [MainThread]: 
+[0m21:31:36.387109 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[0m21:31:36.388592 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.9342399, "process_in_blocks": "0", "process_kernel_time": 0.107018, "process_mem_max_rss": "129580", "process_out_blocks": "1912", "process_user_time": 1.733299}
+[0m21:31:36.389097 [debug] [MainThread]: Command `dbt run` succeeded at 21:31:36.389000 after 0.94 seconds
+[0m21:31:36.389438 [debug] [MainThread]: Flushing usage events

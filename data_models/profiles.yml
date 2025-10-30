@@ -1,0 +1,16 @@
+# data_models/profiles.yml
+config:
+  send_anonymous_usage_stats: false
+
+data_models: # This name must match your dbt_project.yml profile setting
+  target: prod
+  outputs:
+    prod:
+      type: postgres
+      threads: 4
+      host: db         # The service name from docker-compose.yml
+      port: 5432
+      user: "{{ env_var('DB_USER') }}"
+      pass: "{{ env_var('DB_PASSWORD') }}"
+      dbname: "{{ env_var('DB_NAME') }}"
+      schema: public   # This is where dbt looks for raw data

@@ -1,48 +1,112 @@
-# docker-compose.yml (or .yaml)
-version: '3.8'
+# docker-compose.yml
 
 services:
-  # The database service
+  # ----------------------------------------
+  # 1. DATABASE SERVICE (POSTGRES)
+  # ----------------------------------------
   db:
-    image: postgres:16-alpine  # Use a specific, stable, and small-footprint image
-    container_name: patakota_postgres_db
-    restart: unless-stopped   # Always restart the container unless it was stopped manually
+    image: postgres:16-alpine
+    container_name: my_app_postgres_db
+    restart: unless-stopped
     environment:
-      # These variables create the initial user and database
-      # In a real production setup, use Docker Secrets or a secrets manager
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: ${DB_NAME}
-      # Specify the data directory inside the container
       PGDATA: /var/lib/postgresql/data
-    
-    # Define a named volume for persistent storage
     volumes:
       - postgres_data:/var/lib/postgresql/data
-    
-    # Health check to ensure the database is ready for connections
+      # Mount custom tuning file
+      - ./infrastructure/postgres/postgresql.conf:/etc/postgresql/postgresql.conf
+    command: 
+      - -c
+      - listen_addresses=*
+      - -c
+      - config_file=/etc/postgresql/postgresql.conf
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
       interval: 5s
       timeout: 5s
       retries: 5
-    
-    # Restrict network exposure: DO NOT expose port 5432 publicly!
-    # The application service will connect to 'db:5432' within the 'backend_network'.
+    ports:
+      - "5432:5432"
     networks:
       - backend_network
-    
-    # Optional: Expose the port locally only for maintenance/debugging
-    # Only uncomment in special cases and never in a publicly accessible host
-    # ports:
-    #   - "5432:5432"
 
-# Define the named volume for data persistence
+  # ----------------------------------------
+  # 2. MIGRATION SERVICE (FLYWAY STAND-IN)
+  # ----------------------------------------
+  migration:
+    image: flyway/flyway:latest # Use a dedicated migration tool
+    container_name: db_migrator
+    depends_on:
+      db:
+        condition: service_healthy # Ensure the DB is ready before migrating
+    volumes:
+      # Mount your SQL scripts for Flyway to find
+      - ./migrations:/flyway/sql
+    environment:
+      # Pass DB credentials to Flyway
+      FLYWAY_URL: jdbc:postgresql://db:5432/${DB_NAME}
+      FLYWAY_USER: ${POSTGRES_USER}
+      FLYWAY_PASSWORD: ${POSTGRES_PASSWORD}
+    entrypoint: /bin/bash 
+    command: -c "sleep 5 && flyway migrate -locations=filesystem:/flyway/sql" # Explicitly set location
+    
+    # ADD THIS LINE: Explicitly set the working directory for Flyway
+    working_dir: /flyway
+    networks:
+      - backend_network
+      
+  # ----------------------------------------
+  # 3. DBT TRANSFORMATION SERVICE
+  # ----------------------------------------
+  dbt:
+    image: ghcr.io/dbt-labs/dbt-postgres:latest
+    container_name: data_transformer
+    platform: linux/amd64
+    depends_on:
+      migration:
+        condition: service_completed_successfully # Ensure migrations ran successfully
+    environment:
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+    volumes:
+      # Mount your dbt project files and profiles
+      - ./data_models:/usr/app/dbt_project
+    working_dir: /usr/app/dbt_project
+    # The command to execute the dbt transformation process
+    entrypoint: /bin/sh
+    command: -c "sleep 10 && dbt debug --target prod && dbt run --target prod"
+    networks:
+      - backend_network
+
+# ----------------------------------------
+  # 4. PGADMIN SERVICE (NEW)
+  # ----------------------------------------
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin_ui
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+      PGADMIN_CONFIG_CHECK_EMAIL_DELIVERABILITY: "False"
+      PGADMIN_CONFIG_ALLOW_SPECIAL_EMAIL_DOMAINS: '["local","test","localhost"]'
+    ports:
+      # Expose the pgAdmin web UI port (80 on the container) to the host (8080)
+      - "8080:80" 
+    networks:
+      - backend_network
+    depends_on:
+      db:
+        condition: service_healthy # Wait for the database to be up
+
+# Define volumes and networks
 volumes:
   postgres_data:
-    driver: local  # Use the local driver
+    driver: local
 
-# Define the internal network
 networks:
   backend_network:
     driver: bridge
