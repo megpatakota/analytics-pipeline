@@ -19,6 +19,7 @@ This project's documentation is organized into focused guides for easy navigatio
 | **[Data Flow](docs/DATA_FLOW.md)** | How data moves through the pipeline |
 | **[Components](docs/COMPONENTS.md)** | Detailed component documentation |
 | **[Commands Reference](docs/COMMANDS.md)** | Useful commands and operations |
+| **[Quality Checks](docs/QUALITY_CHECKS.md)** | Security, data quality, and reliability features |
 
 ## 📋 Quick Start
 
@@ -43,14 +44,18 @@ sql/
 │   ├── PGADMIN_GUIDE.md                    # Database UI guide
 │   ├── DATA_FLOW.md                        # Data flow documentation
 │   ├── COMPONENTS.md                       # Component details
-│   └── COMMANDS.md                         # Commands reference
+│   ├── COMMANDS.md                         # Commands reference
+│   └── QUALITY_CHECKS.md                   # Quality & security features
 ├── data_models/                             # DBT Project
 │   ├── dbt_project.yml                     # DBT configuration
 │   ├── profiles.yml                        # Database connection details
+│   ├── packages.yml                        # dbt package dependencies
 │   └── models/
 │       ├── sources.yml                     # Raw table references
 │       ├── staging/                        # Data cleaning layer
+│       │   └── schema.yml                  # Staging tests
 │       └── marts/                          # Business intelligence layer
+│           └── schema.yml                  # Mart tests
 └── migrations/                             # Database schema
     ├── V1__create_raw_tables.sql           # Creates raw tables
     └── V2__add_foreign_keys.sql            # (Optional) FK constraints
@@ -76,7 +81,7 @@ sql/
 | **PostgreSQL 16** | Production-ready relational database |
 | **Docker Compose** | Multi-container orchestration |
 | **Flyway** | Database migration management |
-| **DBT (Data Build Tool)** | SQL-based data transformation |
+| **DBT (Data Build Tool)** | SQL-based data transformation (incremental marts) |
 | **pgAdmin 4** | Web-based PostgreSQL administration UI |
 
 ---
@@ -98,6 +103,10 @@ docker exec -it my_app_postgres_db psql -U $DB_USER -d $DB_NAME
 
 # Rebuild transforms
 docker exec -it data_transformer dbt run --target prod
+ 
+# Rebuild fact incrementally or fully
+docker exec -it data_transformer dbt run --select fact_sales --target prod
+docker exec -it data_transformer dbt run --full-refresh --select fact_sales --target prod
 ```
 
 **For complete commands**: See [Commands Reference](docs/COMMANDS.md)
@@ -129,6 +138,7 @@ docker exec -it data_transformer dbt run --target prod
 - [Data Flow](docs/DATA_FLOW.md)
 - [Components](docs/COMPONENTS.md)
 - [Commands Reference](docs/COMMANDS.md)
+- [Quality Checks](docs/QUALITY_CHECKS.md)
 
 ---
 

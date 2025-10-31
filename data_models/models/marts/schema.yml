@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: dim_products
+    description: "Product dimension table for analytics."
+    columns:
+      - name: product_pk
+        tests:
+          - not_null
+      - name: product_sku
+        tests:
+          - not_null
+
+  - name: fact_sales
+    description: "Sales fact table joined from orders and items with product attributes. Incremental for scalability."
+    columns:
+      - name: order_key
+        tests:
+          - not_null
+      - name: product_key
+        tests:
+          - not_null
+      - name: sales_timestamp
+        tests:
+          - not_null
+      - name: sales_date
+        tests:
+          - not_null
+      - name: units_sold
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_products')
+              field: product_pk
+              where: "product_key IS NOT NULL"
+      - name: gross_revenue_amount
+        tests:
+          - not_null
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "gross_revenue_amount >= 0"
+      - dbt_utils.expression_is_true:
+          expression: "units_sold > 0"
+      - dbt_utils.accepted_range:
+          column_name: sales_timestamp
+          min_value: "'2000-01-01'"
+          max_value: "NOW()"
+
+

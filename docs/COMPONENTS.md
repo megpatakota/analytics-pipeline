@@ -17,6 +17,7 @@ The pipeline consists of four services orchestrated by Docker Compose.
 - **Port**: `5432` (exposed to host)
 - **Restart Policy**: `unless-stopped`
 - **Health Check**: Checks readiness every 5 seconds
+ - **Resource Limits**: `mem_limit: 1g`, `cpus: 2.0`
 
 **Volumes**:
 - `postgres_data` - Persistent storage for database files
@@ -77,6 +78,18 @@ sleep 10 && dbt debug --target prod && dbt run --target prod
 ```
 
 **Lifecycle**: Runs once, then exits
+
+### Service 4: Maintenance (`maintenance`)
+
+**Image**: `postgres:16-alpine`
+
+**Purpose**: Post-run table maintenance to keep planner stats fresh and reduce bloat.
+
+**Configuration**:
+- **Container Name**: `db_maintenance`
+- **Depends On**: `dbt` (waits for completion)
+- **Command**: Executes `VACUUM (ANALYZE)` on `analytics.fact_sales` and `analytics.dim_products`.
+- **Lifecycle**: Runs once after dbt and exits.
 
 ### Service 4: pgAdmin (`pgadmin`)
 

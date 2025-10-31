@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: stg_products
+    description: "Cleaned and standardized product data from raw layer."
+    columns:
+      - name: product_pk
+        tests:
+          - not_null
+          - unique
+      - name: product_sku
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_orders
+    description: "Cleaned and standardized order data from raw layer."
+    columns:
+      - name: order_pk
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_order_items
+    description: "Cleaned and standardized order item data from raw layer."
+    columns:
+      - name: order_item_pk
+        tests:
+          - not_null
+          - unique
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "quantity > 0"
+

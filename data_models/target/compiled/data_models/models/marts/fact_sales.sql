@@ -58,3 +58,10 @@ WHERE
     o.order_status = 'Delivered' 
     -- Filter out any future-dated orders or garbage data
     AND o.order_timestamp <= NOW()
+
+    
+    -- Only process records newer than the latest already built
+    AND o.order_timestamp > (
+        SELECT COALESCE(MAX(sales_timestamp), TIMESTAMP '1900-01-01') FROM "primary_app_db"."public_analytics"."fact_sales"
+    )
+    

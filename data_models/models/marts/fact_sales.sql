@@ -2,9 +2,16 @@
 
 -- Materialize as a table for the best query performance in Power BI
 {{ config(
-    materialized='table', 
+    materialized='incremental',
+    unique_key=['order_key','product_key'],
+    on_schema_change='append_new_columns',
     schema='analytics',
-    tags=['finance', 'daily_run', 'fact']
+    tags=['finance', 'daily_run', 'fact'],
+    post_hook=[
+      "CREATE INDEX IF NOT EXISTS idx_fact_sales_sales_date ON {{ this }} (sales_date)",
+      "CREATE INDEX IF NOT EXISTS idx_fact_sales_product_key ON {{ this }} (product_key)",
+      "CREATE INDEX IF NOT EXISTS idx_fact_sales_order_key ON {{ this }} (order_key)"
+    ]
 ) }}
 
 WITH items AS (
@@ -62,3 +69,10 @@ WHERE
     o.order_status = 'Delivered' 
     -- Filter out any future-dated orders or garbage data
     AND o.order_timestamp <= NOW()
+
+    {% if is_incremental() %}
+    -- Only process records newer than the latest already built
+    AND o.order_timestamp > (
+        SELECT COALESCE(MAX(sales_timestamp), TIMESTAMP '1900-01-01') FROM {{ this }}
+    )
+    {% endif %}

@@ -8,6 +8,8 @@ services:
     image: postgres:16-alpine
     container_name: my_app_postgres_db
     restart: unless-stopped
+    mem_limit: "1g"
+    cpus: "2.0"
     environment:
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
@@ -43,8 +45,8 @@ services:
     environment:
       # Pass DB credentials to Flyway
       FLYWAY_URL: jdbc:postgresql://db:5432/${DB_NAME}
-      FLYWAY_USER: ${POSTGRES_USER}
-      FLYWAY_PASSWORD: ${POSTGRES_PASSWORD}
+      FLYWAY_USER: ${DB_USER}
+      FLYWAY_PASSWORD: ${DB_PASSWORD}
     entrypoint: /bin/bash 
     command: -c "sleep 5 && flyway migrate -locations=filesystem:/flyway/sql" # Explicitly set location
     
@@ -73,12 +75,28 @@ services:
     working_dir: /usr/app/dbt_project
     # The command to execute the dbt transformation process
     entrypoint: /bin/sh
-    command: -c "sleep 10 && dbt debug --target prod && dbt run --target prod"
+    command: -c "sleep 10 && dbt deps --target prod && dbt run --target prod && dbt test --target prod"
+    networks:
+      - backend_network
+
+  # ----------------------------------------
+  # 4. MAINTENANCE (VACUUM/ANALYZE)
+  # ----------------------------------------
+  maintenance:
+    image: postgres:16-alpine
+    container_name: db_maintenance
+    depends_on:
+      dbt:
+        condition: service_completed_successfully
+    environment:
+      PGPASSWORD: ${DB_PASSWORD}
+    entrypoint: /bin/sh
+    command: -c "sleep 5 && psql -h db -U ${DB_USER} -d ${DB_NAME} -c \"VACUUM (ANALYZE) public_analytics.fact_sales;\"; psql -h db -U ${DB_USER} -d ${DB_NAME} -c \"VACUUM (ANALYZE) public_analytics.dim_products;\""
     networks:
       - backend_network
 
 # ----------------------------------------
-  # 4. PGADMIN SERVICE (NEW)
+  # 5. PGADMIN SERVICE (NEW)
   # ----------------------------------------
   pgadmin:
     image: dpage/pgadmin4

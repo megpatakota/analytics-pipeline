@@ -218,7 +218,7 @@ END AS product_category_name
 3. Joins products to get category names
 4. Calculates gross revenue
 
-**Materialization**: `table` for performance
+**Materialization**: `incremental` for performance at scale; maintains indexes on `sales_date`, `product_key`, and `order_key`. Incremental runs process only new data based on `sales_timestamp`.
 
 ### Characteristics
 - ✅ Materialized as tables (fast query performance)

@@ -60,7 +60,7 @@ This document explains the high-level architecture and design patterns used in t
 **Purpose**: Business-ready dimensional models for reporting
 
 **Characteristics**:
-- Materialized as tables (performant)
+- Materialized as tables (performant); facts can be incremental for scalability
 - Star schema design (fact and dimensions)
 - Denormalized for BI tool consumption
 - Business logic embedded
@@ -68,7 +68,7 @@ This document explains the high-level architecture and design patterns used in t
 
 **Files**:
 - `data_models/models/marts/dim_products.sql` - Product dimension
-- `data_models/models/marts/fact_sales.sql` - Sales fact table
+- `data_models/models/marts/fact_sales.sql` - Sales fact table (incremental materialization)
 
 ## Design Principles
 
