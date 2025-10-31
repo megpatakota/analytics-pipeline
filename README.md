@@ -2,6 +2,11 @@
 
 This project demonstrates a modern data engineering pipeline using Docker, PostgreSQL, Flyway migrations, and dbt for data transformation. The architecture follows a layered approach: **Raw Data → Staging → Analytics Marts**.
 
+> Note
+> - This repository is a demonstration setup and learning guide.
+> - The database starts with no sample data; tables will be empty until you insert data (see `docs/COMMANDS.md#adding-sample-data`).
+> - A sample analytics dashboard built on these models will be added next.
+
 ## 📚 Documentation
 
 This project's documentation is organized into focused guides for easy navigation:
